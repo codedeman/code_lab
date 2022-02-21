@@ -1,0 +1,6 @@
+module Pods_AppLab_AppLabUITests {
+  umbrella header "Pods-AppLab-AppLabUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

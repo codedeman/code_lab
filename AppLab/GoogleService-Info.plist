@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>256902342694-m53el5g6vp5f9usi584l6hctequessd8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.256902342694-m53el5g6vp5f9usi584l6hctequessd8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyADRgMScSrjWlfA5RwyqgtDVXQVI4cC0U8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>256902342694</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.vnpay.AppLab</string>
+	<key>PROJECT_ID</key>
+	<string>chatapp-752dd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chatapp-752dd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:256902342694:ios:d39f8547c0552af3f3dee7</string>
+</dict>
+</plist>
