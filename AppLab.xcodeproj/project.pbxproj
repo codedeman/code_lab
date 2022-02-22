@@ -20,7 +20,6 @@
 		3022C1F527C36D0700EE60CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022C1F427C36D0700EE60CC /* SceneDelegate.swift */; };
 		3022C1F727C36D0700EE60CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022C1F627C36D0700EE60CC /* ViewController.swift */; };
 		3022C1FA27C36D0700EE60CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3022C1F827C36D0700EE60CC /* Main.storyboard */; };
-		3022C1FC27C36D0C00EE60CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3022C1FB27C36D0C00EE60CC /* Assets.xcassets */; };
 		3022C1FF27C36D0C00EE60CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3022C1FD27C36D0C00EE60CC /* LaunchScreen.storyboard */; };
 		3022C20A27C36D0C00EE60CC /* AppLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022C20927C36D0C00EE60CC /* AppLabTests.swift */; };
 		3022C21427C36D0C00EE60CC /* AppLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022C21327C36D0C00EE60CC /* AppLabUITests.swift */; };
@@ -424,7 +423,6 @@
 				301A664927C4C35A00264F84 /* ChatViewController.xib in Resources */,
 				3022C1FF27C36D0C00EE60CC /* LaunchScreen.storyboard in Resources */,
 				3022C24027C37DFB00EE60CC /* UIFloatingTextField.xib in Resources */,
-				3022C1FC27C36D0C00EE60CC /* Assets.xcassets in Resources */,
 				3022C1FA27C36D0700EE60CC /* Main.storyboard in Resources */,
 				301886BC27C4A01B00CC3C66 /* NewFeedCell.xib in Resources */,
 				30B3A99D27C39BF7001D8A7F /* GoogleService-Info.plist in Resources */,
@@ -768,7 +766,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -798,7 +796,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

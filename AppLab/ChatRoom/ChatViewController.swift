@@ -20,7 +20,7 @@ class ChatViewController: MessagesViewController {
     
     var interactor: ChatInteractorLogic!
     var router: ChatRoutingLogic!
-    let sender = Sender(senderId: "any_unique_id", displayName: "Steven")
+    let sender = Sender(senderId: "any_unique_id", displayName: "Steven", photoURl: "")
 
     private  var messages = [Message]()
     
