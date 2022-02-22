@@ -9,6 +9,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 // MARK: Presenter Interface
 protocol NewFeedPresentationLogic: AnyObject {
     
@@ -21,11 +22,41 @@ class NewFeedViewController: BaseViewController {
     
     // MARK: IBOutlet
     
+    @IBOutlet weak var tableView: UITableView!
+    let disposeBag = DisposeBag()
+
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         fetchDataOnLoad()
+        blindindTaleView()
+    }
+    
+    func blindindTaleView() {
+        
+        let cities = Observable.of(["Lisbon", "Copenhagen", "London", "Madrid",
+       "Vienna"])
+        tableView.register(UINib(nibName: "NewFeedCell", bundle: nil), forCellReuseIdentifier: "NewFeedCell")
+        cities
+          .bind(to: tableView.rx.items) {
+              (tableView: UITableView, index: Int, element: String) in
+              let indexPath = IndexPath(item: index, section: 0)
+
+              guard  let cell:NewFeedCell = tableView.dequeueReusableCell(withIdentifier: "NewFeedCell",for: indexPath) as? NewFeedCell else {return UITableViewCell()}
+
+              cell.lblName.text = element
+        return cell }
+          .disposed(by: disposeBag)
+        
+//
+//        cities.bind(to: tableView.rx.items(cellIdentifier: "NewFeedCell")) { index, model, cell in
+////          cell.textLabel?.text = model
+//
+//            cell
+//        }
+         
+
     }
     
     // MARK: Fetch NewFeed

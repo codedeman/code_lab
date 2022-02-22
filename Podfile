@@ -7,6 +7,8 @@ target 'AppLab' do
 
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'MessageKit'
+
 
 
   target 'AppLabTests' do

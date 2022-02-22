@@ -68,7 +68,9 @@ class SignInViewController: BaseViewController {
     @IBAction func didTabLoginBtn(_ sender: Any) {
         guard let emailText = txtUserName.txtInput.text else {return}
         guard let passworldText = txtPassWorld.txtInput.text else {return}
-        self.interactor.performSignIn(email: emailText, passworld: passworldText)
+//        self.interactor.performSignIn(email: emailText, passworld: passworldText)
+        let vc = ChatConfigurator.viewcontroller()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: IBAction
@@ -76,5 +78,6 @@ class SignInViewController: BaseViewController {
 
 // MARK: Connect View, Interactor, and Presenter
 extension SignInViewController: SignInPresentationLogic {
+    
     
 }

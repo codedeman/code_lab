@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301886BB27C4A01B00CC3C66 /* NewFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301886B927C4A01B00CC3C66 /* NewFeedCell.swift */; };
+		301886BC27C4A01B00CC3C66 /* NewFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301886BA27C4A01B00CC3C66 /* NewFeedCell.xib */; };
+		301A664427C4C35A00264F84 /* ChatWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A663E27C4C35A00264F84 /* ChatWorker.swift */; };
+		301A664527C4C35A00264F84 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A663F27C4C35A00264F84 /* ChatRouter.swift */; };
+		301A664627C4C35A00264F84 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A664027C4C35A00264F84 /* ChatViewController.swift */; };
+		301A664727C4C35A00264F84 /* ChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A664127C4C35A00264F84 /* ChatInteractor.swift */; };
+		301A664827C4C35A00264F84 /* ChatConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A664227C4C35A00264F84 /* ChatConfigurator.swift */; };
+		301A664927C4C35A00264F84 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301A664327C4C35A00264F84 /* ChatViewController.xib */; };
+		301A664C27C4C3BC00264F84 /* MessageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A664B27C4C3BC00264F84 /* MessageModels.swift */; };
 		3022C1F327C36D0700EE60CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022C1F227C36D0700EE60CC /* AppDelegate.swift */; };
 		3022C1F527C36D0700EE60CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022C1F427C36D0700EE60CC /* SceneDelegate.swift */; };
 		3022C1F727C36D0700EE60CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022C1F627C36D0700EE60CC /* ViewController.swift */; };
@@ -61,6 +70,15 @@
 /* Begin PBXFileReference section */
 		1AEDC7532D60DBFFA0A7AE51 /* libPods-AppLab-AppLabUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppLab-AppLabUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AAEFFCDCA81FA1D0B12B86 /* Pods-AppLab-AppLabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLab-AppLabUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppLab-AppLabUITests/Pods-AppLab-AppLabUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		301886B927C4A01B00CC3C66 /* NewFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedCell.swift; sourceTree = "<group>"; };
+		301886BA27C4A01B00CC3C66 /* NewFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFeedCell.xib; sourceTree = "<group>"; };
+		301A663E27C4C35A00264F84 /* ChatWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWorker.swift; sourceTree = "<group>"; };
+		301A663F27C4C35A00264F84 /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
+		301A664027C4C35A00264F84 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		301A664127C4C35A00264F84 /* ChatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInteractor.swift; sourceTree = "<group>"; };
+		301A664227C4C35A00264F84 /* ChatConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatConfigurator.swift; sourceTree = "<group>"; };
+		301A664327C4C35A00264F84 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		301A664B27C4C3BC00264F84 /* MessageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModels.swift; sourceTree = "<group>"; };
 		3022C1EF27C36D0700EE60CC /* AppLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3022C1F227C36D0700EE60CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3022C1F427C36D0700EE60CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +159,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		301886B827C49FEE00CC3C66 /* NewFeedCell */ = {
+			isa = PBXGroup;
+			children = (
+				301886B927C4A01B00CC3C66 /* NewFeedCell.swift */,
+				301886BA27C4A01B00CC3C66 /* NewFeedCell.xib */,
+			);
+			path = NewFeedCell;
+			sourceTree = "<group>";
+		};
+		301A663D27C4C33D00264F84 /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				301A664A27C4C39E00264F84 /* Model */,
+				301A663E27C4C35A00264F84 /* ChatWorker.swift */,
+				301A663F27C4C35A00264F84 /* ChatRouter.swift */,
+				301A664027C4C35A00264F84 /* ChatViewController.swift */,
+				301A664127C4C35A00264F84 /* ChatInteractor.swift */,
+				301A664227C4C35A00264F84 /* ChatConfigurator.swift */,
+				301A664327C4C35A00264F84 /* ChatViewController.xib */,
+			);
+			path = ChatRoom;
+			sourceTree = "<group>";
+		};
+		301A664A27C4C39E00264F84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				301A664B27C4C3BC00264F84 /* MessageModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3022C1E627C36D0700EE60CC = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +215,7 @@
 		3022C1F127C36D0700EE60CC /* AppLab */ = {
 			isa = PBXGroup;
 			children = (
+				301A663D27C4C33D00264F84 /* ChatRoom */,
 				30B3A99C27C39BF7001D8A7F /* GoogleService-Info.plist */,
 				30B3A98F27C39684001D8A7F /* NewFeed */,
 				3022C22727C374ED00EE60CC /* LoginScreen */,
@@ -236,6 +286,7 @@
 		30B3A98F27C39684001D8A7F /* NewFeed */ = {
 			isa = PBXGroup;
 			children = (
+				301886B827C49FEE00CC3C66 /* NewFeedCell */,
 				30B3A99027C3975B001D8A7F /* NewFeedWorker.swift */,
 				30B3A99127C3975B001D8A7F /* NewFeedRouter.swift */,
 				30B3A99227C3975B001D8A7F /* NewFeedViewController.swift */,
@@ -370,10 +421,12 @@
 			files = (
 				3022C23927C3756300EE60CC /* SignInViewController.xib in Resources */,
 				30B3A99B27C3975B001D8A7F /* NewFeedViewController.xib in Resources */,
+				301A664927C4C35A00264F84 /* ChatViewController.xib in Resources */,
 				3022C1FF27C36D0C00EE60CC /* LaunchScreen.storyboard in Resources */,
 				3022C24027C37DFB00EE60CC /* UIFloatingTextField.xib in Resources */,
 				3022C1FC27C36D0C00EE60CC /* Assets.xcassets in Resources */,
 				3022C1FA27C36D0700EE60CC /* Main.storyboard in Resources */,
+				301886BC27C4A01B00CC3C66 /* NewFeedCell.xib in Resources */,
 				30B3A99D27C39BF7001D8A7F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,18 +562,25 @@
 				3022C22627C36D8700EE60CC /* MyTheme.swift in Sources */,
 				30B3A99927C3975B001D8A7F /* NewFeedInteractor.swift in Sources */,
 				30B3A99627C3975B001D8A7F /* NewFeedWorker.swift in Sources */,
+				301A664C27C4C3BC00264F84 /* MessageModels.swift in Sources */,
 				3022C23527C3756300EE60CC /* SignInRouter.swift in Sources */,
 				3022C23627C3756300EE60CC /* SignInViewController.swift in Sources */,
 				30B3A98E27C391D8001D8A7F /* GradientButton.swift in Sources */,
 				3022C1F327C36D0700EE60CC /* AppDelegate.swift in Sources */,
 				3022C1F527C36D0700EE60CC /* SceneDelegate.swift in Sources */,
+				301A664427C4C35A00264F84 /* ChatWorker.swift in Sources */,
 				3022C22427C36D3B00EE60CC /* ThemeManager.swift in Sources */,
+				301A664527C4C35A00264F84 /* ChatRouter.swift in Sources */,
 				3022C23727C3756300EE60CC /* SignInInteractor.swift in Sources */,
+				301A664627C4C35A00264F84 /* ChatViewController.swift in Sources */,
+				301886BB27C4A01B00CC3C66 /* NewFeedCell.swift in Sources */,
+				301A664727C4C35A00264F84 /* ChatInteractor.swift in Sources */,
 				30B3A99727C3975B001D8A7F /* NewFeedRouter.swift in Sources */,
 				3022C23E27C37DED00EE60CC /* UIFloatingTextField.swift in Sources */,
 				30B3A99827C3975B001D8A7F /* NewFeedViewController.swift in Sources */,
 				30B3A99A27C3975B001D8A7F /* NewFeedConfigurator.swift in Sources */,
 				30B3A98C27C38BAB001D8A7F /* Extension+UIView.swift in Sources */,
+				301A664827C4C35A00264F84 /* ChatConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

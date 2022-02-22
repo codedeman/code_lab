@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-AppLab/Pods-AppLab-resources.sh
+${PODS_ROOT}/MessageKit/Sources/Assets.xcassets
 ${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle
