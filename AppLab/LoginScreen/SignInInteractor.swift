@@ -10,6 +10,7 @@
 /// SignIn Module Interactor Protocol
 protocol SignInInteractorLogic {
     
+    func performSignIn(email:String,passworld:String)
 }
 
 /// SignIn Module Interactor
@@ -24,6 +25,15 @@ class SignInInteractor {
 }
 
 extension SignInInteractor: SignInInteractorLogic {
+    func performSignIn(email: String, passworld: String) {
+        
+        worker.performSignIn(withEmail: email, andPassworld: passworld) { status, error in
+            if status{
+                self.router.openNewFeed()
+            }
+        }
+    }
+    
 
 }
 

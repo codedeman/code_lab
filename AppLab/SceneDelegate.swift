@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -16,7 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        let vc =  SignInViewController.init(nibName:"SignInViewController" , bundle: nil)
+        FirebaseApp.configure()
+
+        let vc =  SignInConfigurator.viewcontroller()
         let navi = UINavigationController(rootViewController: vc)
         window?.rootViewController = navi
         guard let _ = (scene as? UIWindowScene) else { return }

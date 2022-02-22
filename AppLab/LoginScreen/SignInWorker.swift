@@ -7,14 +7,29 @@
 //
 //
 
+import Firebase
+
 protocol SignInWorkerLogic {
     func performRegister(withEmail email:String, andPassworld passworl:String)
+    func performSignIn(withEmail email:String, andPassworld passworl:String ,loginCompleted:@escaping (_ status:Bool,_ error:Error?)->())
 }
 
 class SignInWorker: SignInWorkerLogic {
+    func performSignIn(withEmail email: String, andPassworld passworl: String, loginCompleted: @escaping (Bool, Error?) -> ()) {
+        Auth.auth().signIn(withEmail: email, password: passworl) { user, error in
+            print("test user \(user?.description)")
+            if error != nil {
+                loginCompleted(false,error)
+            }
+            loginCompleted(true, nil)
+        }
+    }
+    
     func performRegister(withEmail email: String, andPassworld passworl: String) {
         
     }
+    
+   
     
     // MARK: Business Logic
     

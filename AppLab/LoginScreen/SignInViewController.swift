@@ -65,6 +65,12 @@ class SignInViewController: BaseViewController {
         
     }
     
+    @IBAction func didTabLoginBtn(_ sender: Any) {
+        guard let emailText = txtUserName.txtInput.text else {return}
+        guard let passworldText = txtPassWorld.txtInput.text else {return}
+        self.interactor.performSignIn(email: emailText, passworld: passworldText)
+    }
+    
     // MARK: IBAction
 }
 

@@ -10,7 +10,7 @@
 import UIKit
 
 protocol SignInRoutingLogic: class {
-    
+    func openNewFeed()
 }
 
 class SignInRouter {
@@ -19,6 +19,10 @@ class SignInRouter {
 
 extension SignInRouter: SignInRoutingLogic {
    
+    func openNewFeed() {
+        let vc = NewFeedConfigurator.viewcontroller()
+        self.viewController.navigationController?.pushViewController(vc, animated: true)
+    }
     // MARK: Navigation
     /* Example
     func navigateToSomewhere() {

@@ -4,11 +4,9 @@
 target 'AppLab' do
  pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
-pod 'Firebase/Core'
 
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
-pod 'BoringSSL-GRPC', '0.0.3'
 
 
   target 'AppLabTests' do
