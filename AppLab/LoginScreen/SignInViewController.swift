@@ -68,9 +68,8 @@ class SignInViewController: BaseViewController {
     @IBAction func didTabLoginBtn(_ sender: Any) {
         guard let emailText = txtUserName.txtInput.text else {return}
         guard let passworldText = txtPassWorld.txtInput.text else {return}
-//        self.interactor.performSignIn(email: emailText, passworld: passworldText)
-        let vc = ChatConfigurator.viewcontroller()
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.interactor.performSignIn(email: emailText, passworld: passworldText)
+      
     }
     
     // MARK: IBAction
