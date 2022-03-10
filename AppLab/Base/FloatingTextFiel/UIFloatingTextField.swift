@@ -13,6 +13,9 @@ class UIFloatingTextField: UIView {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var txtInput: UITextField!
     
+//    @IBOutlet weak var vContainTextField: UIView!
+    @IBOutlet weak var vContainTextField: UIView!
+    
     var title:String = ""
     
     var placeHodler:String = "" {
@@ -27,7 +30,10 @@ class UIFloatingTextField: UIView {
         Bundle.main.loadNibNamed("UIFloatingTextField", owner: self, options: nil)
         vContent.fixInView(self)
         txtInput.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        
+        self.vContainTextField.layer.cornerRadius = 5
+        self.vContainTextField.clipsToBounds = true
+        self.vContainTextField.layer.borderWidth = 1
+        self.vContainTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.lblTitle.text = ""
 
     }

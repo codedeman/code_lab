@@ -352,6 +352,9 @@ PODS:
     - FirebaseAnalytics (~> 8.12.0)
   - Firebase/CoreOnly (8.12.1):
     - FirebaseCore (= 8.12.1)
+  - Firebase/Database (8.12.1):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 8.12.0)
   - Firebase/Firestore (8.12.1):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 8.12.1)
@@ -390,6 +393,9 @@ PODS:
     - GoogleUtilities/Environment (~> 7.7)
     - GoogleUtilities/Logger (~> 7.7)
     - nanopb (~> 2.30908.0)
+  - FirebaseDatabase (8.12.0):
+    - FirebaseCore (~> 8.0)
+    - leveldb-library (~> 1.22)
   - FirebaseFirestore (8.12.1):
     - abseil/algorithm (= 0.20200225.0)
     - abseil/base (= 0.20200225.0)
@@ -501,6 +507,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
+  - Firebase/Database
   - Firebase/Firestore
   - Firebase/Storage
   - MessageKit
@@ -516,6 +523,7 @@ SPEC REPOS:
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
+    - FirebaseDatabase
     - FirebaseFirestore
     - FirebaseInstallations
     - FirebaseStorage
@@ -542,6 +550,7 @@ SPEC CHECKSUMS:
   FirebaseAuth: 5250d7bdba35e57cc34ec7ddc525f82b2757f2a0
   FirebaseCore: 8138de860a90ca7eec5e324da5788fb0ebf1d93c
   FirebaseCoreDiagnostics: 3b40dfadef5b90433a60ae01f01e90fe87aa76aa
+  FirebaseDatabase: f130b3d45b2a7a0b86059734d5bd67353df8d32f
   FirebaseFirestore: dfeb58916ee3ae0ef2453d4849a683672705920c
   FirebaseInstallations: 25764cf322e77f99449395870a65b2bef88e1545
   FirebaseStorage: 4b75458c35d8b728e4c1fc1371942997456ab299
@@ -560,6 +569,6 @@ SPEC CHECKSUMS:
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 2b51dac89e92e7fd14073a24e45d09f402df9017
+PODFILE CHECKSUM: ae9fe13df60602c4facf060ee53261f63d6536c1
 
 COCOAPODS: 1.11.2

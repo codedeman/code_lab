@@ -20,8 +20,10 @@ class SignInWorker: SignInWorkerLogic {
             print("test user \(user?.description)")
             if error != nil {
                 loginCompleted(false,error)
+            } else {
+                loginCompleted(true, nil)
+
             }
-            loginCompleted(true, nil)
         }
     }
     

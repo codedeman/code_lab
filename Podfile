@@ -9,8 +9,10 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'MessageKit'
 pod 'Firebase/Core'
+pod 'Firebase/Database'
 
 pod 'Firebase/Storage'
+
 
 
   target 'AppLabTests' do

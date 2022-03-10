@@ -12,6 +12,7 @@ import UIKit
 protocol SignInRoutingLogic: class {
     func openNewFeed()
     func openChatRoom()
+    func openSignUp()
 }
 
 class SignInRouter {
@@ -20,6 +21,11 @@ class SignInRouter {
 
 extension SignInRouter: SignInRoutingLogic {
    
+    func openSignUp() {
+        
+        let vc = NewRoomConfigurator.viewcontroller()
+        self.viewController.navigationController?.pushViewController(vc, animated: true)
+    }
     func openNewFeed() {
         let vc = NewFeedConfigurator.viewcontroller()
         self.viewController.navigationController?.pushViewController(vc, animated: true)

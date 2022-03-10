@@ -43,6 +43,10 @@ class SignInViewController: BaseViewController {
         }
     }
     
+    @IBAction func didTabSignUpBtn(_ sender: Any) {
+        router.openSignUp()
+    }
+    
     // MARK: Fetch SignIn
     private func fetchDataOnLoad() {
         // NOTE: Ask the Interactor to do some work
@@ -56,11 +60,16 @@ class SignInViewController: BaseViewController {
         
         self.txtPassWorld.title = "Pass World"
         self.txtPassWorld.placeHodler = "Pass Word"
+        self.txtUserName.txtInput.text = "kevin@gmail.com"
+        self.txtPassWorld.txtInput.text = "111111"
         
         btnLogin.layer.cornerRadius = 10
         btnLogin.clipsToBounds = true
-        self.vContainer.layer.cornerRadius = 10
-        self.vContainer.clipsToBounds = true
+//        self.vContainer.layer.cornerRadius = 10
+//        self.vContainer.clipsToBounds = true
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
         
         
     }
@@ -69,11 +78,12 @@ class SignInViewController: BaseViewController {
         guard let emailText = txtUserName.txtInput.text else {return}
         guard let passworldText = txtPassWorld.txtInput.text else {return}
         self.interactor.performSignIn(email: emailText, passworld: passworldText)
-      
+       
     }
     
     // MARK: IBAction
 }
+
 
 // MARK: Connect View, Interactor, and Presenter
 extension SignInViewController: SignInPresentationLogic {

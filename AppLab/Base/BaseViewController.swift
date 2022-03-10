@@ -9,8 +9,10 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
+    @IBOutlet weak var naviView: NavBarView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 //        self.navigationController?.isNavigationBarHidden = true
 //        self.navigationController?.setNavigationBarHidden(true, animated: true)
 

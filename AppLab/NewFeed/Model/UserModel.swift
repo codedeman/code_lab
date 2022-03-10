@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+
+struct UserModel {
+    
+    var name:String = ""
+    var imageUrl:String = ""
+}

@@ -10,9 +10,12 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Firebase
+import FirebaseAnalytics
 // MARK: Presenter Interface
+
 protocol NewFeedPresentationLogic: AnyObject {
-    
+//    var listUser:Observable<[UserModel]> {get}
 }
 
 // MARK: View
@@ -20,9 +23,14 @@ class NewFeedViewController: BaseViewController {
     var interactor: NewFeedInteractorLogic!
     var router: NewFeedRoutingLogic!
     
+    var ref: DatabaseReference!
+
     // MARK: IBOutlet
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var heighNavBar: NSLayoutConstraint!
+    var headerView:NewFeedHeaderView!
     let disposeBag = DisposeBag()
 
     // MARK: View lifecycle
@@ -31,6 +39,22 @@ class NewFeedViewController: BaseViewController {
         setupView()
         fetchDataOnLoad()
         blindindTaleView()
+        setNavi()
+    
+    }
+    
+    func setNavi() {
+        self.naviView.onLeftBtnClick = {[weak self] in
+            
+        }
+        self.naviView.onSearch = { [weak self] in
+            guard let wSelf = self else {return}
+            wSelf.heighNavBar.constant = 60
+        }
+        self.naviView.onCancel = {[weak self] in
+            guard let wSelf = self else {return}
+            wSelf.heighNavBar.constant = 110
+        }
     }
     
     func blindindTaleView() {
@@ -49,6 +73,16 @@ class NewFeedViewController: BaseViewController {
         return cell }
           .disposed(by: disposeBag)
         
+        tableView.rx.modelSelected(String.self).subscribe { [weak self] element in
+            print("element \(element)")
+            guard let wSelf = self else {return}
+            wSelf.router.openPersonalChat()
+//            router.openPersonalChat()
+        } onError: { error  in
+            print("error \(error)")
+        } 
+
+//        self.interactor
 //
 //        cities.bind(to: tableView.rx.items(cellIdentifier: "NewFeedCell")) { index, model, cell in
 ////          cell.textLabel?.text = model
@@ -67,7 +101,21 @@ class NewFeedViewController: BaseViewController {
     
     // MARK: SetupUI
     private func setupView() {
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.tableView.separatorStyle = .none
+        headerView = NewFeedHeaderView.instantiateFromXib()
         
+        self.tableView.tableHeaderView = headerView
+        
+        let data = Database.database().reference()
+        data.child("feed").observeSingleEvent(of: .value) { [weak self] feedMessageSnapShot  in
+            print("feed snapshot \(feedMessageSnapShot)")
+        }
+        
+        
+
+
     }
     
     // MARK: IBAction
@@ -75,5 +123,15 @@ class NewFeedViewController: BaseViewController {
 
 // MARK: Connect View, Interactor, and Presenter
 extension NewFeedViewController: NewFeedPresentationLogic {
+//    var listUser: Observable<[UserModel]> {
+//        
+//    }
+    
+//    var listUser: Observable<[UserModel]> {
+//
+//
+//    }
+//
+   
     
 }

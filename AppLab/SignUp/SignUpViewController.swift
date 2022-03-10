@@ -10,16 +10,24 @@
 import UIKit
 
 // MARK: Presenter Interface
-protocol SignUpPresentationLogic: class {
+protocol SignUpPresentationLogic: AnyObject {
     
 }
 
 // MARK: View
-class SignUpViewController: BaseViewController {
+class SignUpViewController: BaseViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     var interactor: SignUpInteractorLogic!
     var router: SignUpRoutingLogic!
     
     // MARK: IBOutlet
+    
+    @IBOutlet weak var txtEmail: UIFloatingTextField!
+    
+    @IBOutlet weak var txtPassWorld: UIFloatingTextField!
+    
+    @IBOutlet weak var txtRePassworld: UIFloatingTextField!
+    
+    @IBOutlet weak var imgAvatarPreview: UIImageView!
     
     // MARK: View lifecycle
     override func viewDidLoad() {
@@ -28,6 +36,23 @@ class SignUpViewController: BaseViewController {
         fetchDataOnLoad()
     }
     
+    
+    @IBAction func didTabChoseAvatarBtn(_ sender: Any) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerController.SourceType.photoLibrary
+
+        image.allowsEditing = false
+
+        self.present(image, animated: true)
+        {
+            //after its completed
+        }
+    }
+    
+    @IBAction func didTabCreateBtn(_ sender: Any) {
+        
+    }
     // MARK: Fetch SignUp
     private func fetchDataOnLoad() {
         // NOTE: Ask the Interactor to do some work

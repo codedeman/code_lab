@@ -29,7 +29,7 @@ extension SignInInteractor: SignInInteractorLogic {
         
         worker.performSignIn(withEmail: email, andPassworld: passworld) { status, error in
             if status{
-                self.router.openChatRoom()
+                self.router.openNewFeed()
 //                self.presenter.
             }
         }

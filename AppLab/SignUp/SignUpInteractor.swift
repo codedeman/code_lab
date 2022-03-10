@@ -7,9 +7,11 @@
 //
 //
 
+import Foundation
+
 /// SignUp Module Interactor Protocol
 protocol SignUpInteractorLogic {
-    
+    func performUploadImage(data:Data,filePath:String)
 }
 
 /// SignUp Module Interactor
@@ -24,6 +26,11 @@ class SignUpInteractor {
 }
 
 extension SignUpInteractor: SignUpInteractorLogic {
+    func performUploadImage(data: Data, filePath: String) {
+//        worker.uploadProfilePicture(data: , fileName: <#T##String#>, completion: <#T##UploadPictureCompletion##UploadPictureCompletion##(Result<String, Error>) -> Void#>)
+    }
+    
 
+    
 }
 

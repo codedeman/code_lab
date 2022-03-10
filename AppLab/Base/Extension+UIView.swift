@@ -17,4 +17,15 @@ extension UIView {
         NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
         NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
     }
-}
+    
+    static func instantiateFromXib() -> Self {
+        let dynamicMetatype = Self.self
+        let bundle = Bundle(for: dynamicMetatype)
+        let nib = UINib(nibName: "\(dynamicMetatype)", bundle: bundle)
+        
+        guard let view = nib.instantiate(withOwner: nil, options: nil).first as? Self else {
+            
+            fatalError("Could not load view from nib file.")
+        }
+        return view
+    }}

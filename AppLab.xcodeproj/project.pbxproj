@@ -35,6 +35,29 @@
 		3022C23B27C3758B00EE60CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022C23A27C3758B00EE60CC /* BaseViewController.swift */; };
 		3022C23E27C37DED00EE60CC /* UIFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022C23D27C37DED00EE60CC /* UIFloatingTextField.swift */; };
 		3022C24027C37DFB00EE60CC /* UIFloatingTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3022C23F27C37DFB00EE60CC /* UIFloatingTextField.xib */; };
+		3026021927D8EB2800134DC8 /* NewRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3026021827D8EB2800134DC8 /* NewRoomModel.swift */; };
+		3026021C27D97B2100134DC8 /* RepoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3026021B27D97B2000134DC8 /* RepoListModel.swift */; };
+		3026021F27D97C6500134DC8 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3026021D27D97C6500134DC8 /* RepoViewController.swift */; };
+		3026022027D97C6600134DC8 /* RepoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3026021E27D97C6500134DC8 /* RepoViewController.xib */; };
+		3061A3DA27D8D6C900C4604B /* NewRoomWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061A3D427D8D6C900C4604B /* NewRoomWorker.swift */; };
+		3061A3DB27D8D6C900C4604B /* NewRoomRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061A3D527D8D6C900C4604B /* NewRoomRouter.swift */; };
+		3061A3DC27D8D6C900C4604B /* NewRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061A3D627D8D6C900C4604B /* NewRoomViewController.swift */; };
+		3061A3DD27D8D6C900C4604B /* NewRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061A3D727D8D6C900C4604B /* NewRoomInteractor.swift */; };
+		3061A3DE27D8D6C900C4604B /* NewRoomConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061A3D827D8D6C900C4604B /* NewRoomConfigurator.swift */; };
+		3061A3DF27D8D6C900C4604B /* NewRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3061A3D927D8D6C900C4604B /* NewRoomViewController.xib */; };
+		307B227627C5EF64003032BC /* SignUpWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B227027C5EF64003032BC /* SignUpWorker.swift */; };
+		307B227727C5EF64003032BC /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B227127C5EF64003032BC /* SignUpRouter.swift */; };
+		307B227827C5EF64003032BC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B227227C5EF64003032BC /* SignUpViewController.swift */; };
+		307B227927C5EF64003032BC /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B227327C5EF64003032BC /* SignUpInteractor.swift */; };
+		307B227A27C5EF64003032BC /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B227427C5EF64003032BC /* SignUpConfigurator.swift */; };
+		307B227B27C5EF64003032BC /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307B227527C5EF64003032BC /* SignUpViewController.xib */; };
+		307B227E27C5F4DA003032BC /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B227D27C5F4DA003032BC /* NavBarView.swift */; };
+		307B228027C5F4E6003032BC /* NavBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307B227F27C5F4E6003032BC /* NavBarView.xib */; };
+		307B228327C6088D003032BC /* NewFeedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307B228227C6088D003032BC /* NewFeedHeaderView.xib */; };
+		307B228527C60A5E003032BC /* NewFeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B228427C60A5E003032BC /* NewFeedHeaderView.swift */; };
+		307B228827C60ADA003032BC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B228727C60ADA003032BC /* UserModel.swift */; };
+		307B228B27C60B45003032BC /* NewFeedHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B228927C60B45003032BC /* NewFeedHeaderCell.swift */; };
+		307B228C27C60B45003032BC /* NewFeedHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307B228A27C60B45003032BC /* NewFeedHeaderCell.xib */; };
 		30B3A98C27C38BAB001D8A7F /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A98B27C38BAB001D8A7F /* Extension+UIView.swift */; };
 		30B3A98E27C391D8001D8A7F /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A98D27C391D8001D8A7F /* GradientButton.swift */; };
 		30B3A99627C3975B001D8A7F /* NewFeedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A99027C3975B001D8A7F /* NewFeedWorker.swift */; };
@@ -102,6 +125,29 @@
 		3022C23A27C3758B00EE60CC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3022C23D27C37DED00EE60CC /* UIFloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFloatingTextField.swift; sourceTree = "<group>"; };
 		3022C23F27C37DFB00EE60CC /* UIFloatingTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIFloatingTextField.xib; sourceTree = "<group>"; };
+		3026021827D8EB2800134DC8 /* NewRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoomModel.swift; sourceTree = "<group>"; };
+		3026021B27D97B2000134DC8 /* RepoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListModel.swift; sourceTree = "<group>"; };
+		3026021D27D97C6500134DC8 /* RepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
+		3026021E27D97C6500134DC8 /* RepoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoViewController.xib; sourceTree = "<group>"; };
+		3061A3D427D8D6C900C4604B /* NewRoomWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoomWorker.swift; sourceTree = "<group>"; };
+		3061A3D527D8D6C900C4604B /* NewRoomRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoomRouter.swift; sourceTree = "<group>"; };
+		3061A3D627D8D6C900C4604B /* NewRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoomViewController.swift; sourceTree = "<group>"; };
+		3061A3D727D8D6C900C4604B /* NewRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoomInteractor.swift; sourceTree = "<group>"; };
+		3061A3D827D8D6C900C4604B /* NewRoomConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoomConfigurator.swift; sourceTree = "<group>"; };
+		3061A3D927D8D6C900C4604B /* NewRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewRoomViewController.xib; sourceTree = "<group>"; };
+		307B227027C5EF64003032BC /* SignUpWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWorker.swift; sourceTree = "<group>"; };
+		307B227127C5EF64003032BC /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		307B227227C5EF64003032BC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		307B227327C5EF64003032BC /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		307B227427C5EF64003032BC /* SignUpConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
+		307B227527C5EF64003032BC /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		307B227D27C5F4DA003032BC /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
+		307B227F27C5F4E6003032BC /* NavBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavBarView.xib; sourceTree = "<group>"; };
+		307B228227C6088D003032BC /* NewFeedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFeedHeaderView.xib; sourceTree = "<group>"; };
+		307B228427C60A5E003032BC /* NewFeedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedHeaderView.swift; sourceTree = "<group>"; };
+		307B228727C60ADA003032BC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		307B228927C60B45003032BC /* NewFeedHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedHeaderCell.swift; sourceTree = "<group>"; };
+		307B228A27C60B45003032BC /* NewFeedHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFeedHeaderCell.xib; sourceTree = "<group>"; };
 		30B3A98B27C38BAB001D8A7F /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		30B3A98D27C391D8001D8A7F /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		30B3A99027C3975B001D8A7F /* NewFeedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedWorker.swift; sourceTree = "<group>"; };
@@ -214,6 +260,9 @@
 		3022C1F127C36D0700EE60CC /* AppLab */ = {
 			isa = PBXGroup;
 			children = (
+				3026021A27D97B0700134DC8 /* RepoListModel */,
+				3061A3D327D8D69100C4604B /* NewRoom */,
+				307B226F27C5EF23003032BC /* SignUp */,
 				301A663D27C4C33D00264F84 /* ChatRoom */,
 				30B3A99C27C39BF7001D8A7F /* GoogleService-Info.plist */,
 				30B3A98F27C39684001D8A7F /* NewFeed */,
@@ -251,6 +300,7 @@
 		3022C22227C36D1F00EE60CC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				307B227C27C5F4B0003032BC /* NavBar */,
 				3022C23C27C37D9C00EE60CC /* FloatingTextFiel */,
 				3022C22327C36D3B00EE60CC /* ThemeManager.swift */,
 				3022C23A27C3758B00EE60CC /* BaseViewController.swift */,
@@ -282,9 +332,84 @@
 			path = FloatingTextFiel;
 			sourceTree = "<group>";
 		};
+		3026021727D8EB0F00134DC8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3026021827D8EB2800134DC8 /* NewRoomModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3026021A27D97B0700134DC8 /* RepoListModel */ = {
+			isa = PBXGroup;
+			children = (
+				3026021B27D97B2000134DC8 /* RepoListModel.swift */,
+				3026021D27D97C6500134DC8 /* RepoViewController.swift */,
+				3026021E27D97C6500134DC8 /* RepoViewController.xib */,
+			);
+			path = RepoListModel;
+			sourceTree = "<group>";
+		};
+		3061A3D327D8D69100C4604B /* NewRoom */ = {
+			isa = PBXGroup;
+			children = (
+				3026021727D8EB0F00134DC8 /* Models */,
+				3061A3D427D8D6C900C4604B /* NewRoomWorker.swift */,
+				3061A3D527D8D6C900C4604B /* NewRoomRouter.swift */,
+				3061A3D627D8D6C900C4604B /* NewRoomViewController.swift */,
+				3061A3D727D8D6C900C4604B /* NewRoomInteractor.swift */,
+				3061A3D827D8D6C900C4604B /* NewRoomConfigurator.swift */,
+				3061A3D927D8D6C900C4604B /* NewRoomViewController.xib */,
+			);
+			path = NewRoom;
+			sourceTree = "<group>";
+		};
+		307B226F27C5EF23003032BC /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				307B227027C5EF64003032BC /* SignUpWorker.swift */,
+				307B227127C5EF64003032BC /* SignUpRouter.swift */,
+				307B227227C5EF64003032BC /* SignUpViewController.swift */,
+				307B227327C5EF64003032BC /* SignUpInteractor.swift */,
+				307B227427C5EF64003032BC /* SignUpConfigurator.swift */,
+				307B227527C5EF64003032BC /* SignUpViewController.xib */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		307B227C27C5F4B0003032BC /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				307B227D27C5F4DA003032BC /* NavBarView.swift */,
+				307B227F27C5F4E6003032BC /* NavBarView.xib */,
+			);
+			path = NavBar;
+			sourceTree = "<group>";
+		};
+		307B228127C6086F003032BC /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				307B228227C6088D003032BC /* NewFeedHeaderView.xib */,
+				307B228427C60A5E003032BC /* NewFeedHeaderView.swift */,
+				307B228927C60B45003032BC /* NewFeedHeaderCell.swift */,
+				307B228A27C60B45003032BC /* NewFeedHeaderCell.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		307B228627C60ABE003032BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				307B228727C60ADA003032BC /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		30B3A98F27C39684001D8A7F /* NewFeed */ = {
 			isa = PBXGroup;
 			children = (
+				307B228627C60ABE003032BC /* Model */,
+				307B228127C6086F003032BC /* Header */,
 				301886B827C49FEE00CC3C66 /* NewFeedCell */,
 				30B3A99027C3975B001D8A7F /* NewFeedWorker.swift */,
 				30B3A99127C3975B001D8A7F /* NewFeedRouter.swift */,
@@ -420,10 +545,16 @@
 			files = (
 				3022C23927C3756300EE60CC /* SignInViewController.xib in Resources */,
 				30B3A99B27C3975B001D8A7F /* NewFeedViewController.xib in Resources */,
+				3026022027D97C6600134DC8 /* RepoViewController.xib in Resources */,
+				3061A3DF27D8D6C900C4604B /* NewRoomViewController.xib in Resources */,
 				301A664927C4C35A00264F84 /* ChatViewController.xib in Resources */,
 				3022C1FF27C36D0C00EE60CC /* LaunchScreen.storyboard in Resources */,
+				307B228027C5F4E6003032BC /* NavBarView.xib in Resources */,
+				307B228327C6088D003032BC /* NewFeedHeaderView.xib in Resources */,
+				307B227B27C5EF64003032BC /* SignUpViewController.xib in Resources */,
 				3022C24027C37DFB00EE60CC /* UIFloatingTextField.xib in Resources */,
 				3022C1FA27C36D0700EE60CC /* Main.storyboard in Resources */,
+				307B228C27C60B45003032BC /* NewFeedHeaderCell.xib in Resources */,
 				301886BC27C4A01B00CC3C66 /* NewFeedCell.xib in Resources */,
 				30B3A99D27C39BF7001D8A7F /* GoogleService-Info.plist in Resources */,
 			);
@@ -553,21 +684,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				307B227E27C5F4DA003032BC /* NavBarView.swift in Sources */,
 				3022C1F727C36D0700EE60CC /* ViewController.swift in Sources */,
 				3022C23427C3756300EE60CC /* SignInWorker.swift in Sources */,
 				3022C23B27C3758B00EE60CC /* BaseViewController.swift in Sources */,
+				307B228527C60A5E003032BC /* NewFeedHeaderView.swift in Sources */,
+				3026021927D8EB2800134DC8 /* NewRoomModel.swift in Sources */,
 				3022C23827C3756300EE60CC /* SignInConfigurator.swift in Sources */,
+				3061A3DE27D8D6C900C4604B /* NewRoomConfigurator.swift in Sources */,
 				3022C22627C36D8700EE60CC /* MyTheme.swift in Sources */,
 				30B3A99927C3975B001D8A7F /* NewFeedInteractor.swift in Sources */,
+				307B228827C60ADA003032BC /* UserModel.swift in Sources */,
 				30B3A99627C3975B001D8A7F /* NewFeedWorker.swift in Sources */,
+				3061A3DC27D8D6C900C4604B /* NewRoomViewController.swift in Sources */,
 				301A664C27C4C3BC00264F84 /* MessageModels.swift in Sources */,
+				3061A3DD27D8D6C900C4604B /* NewRoomInteractor.swift in Sources */,
 				3022C23527C3756300EE60CC /* SignInRouter.swift in Sources */,
 				3022C23627C3756300EE60CC /* SignInViewController.swift in Sources */,
 				30B3A98E27C391D8001D8A7F /* GradientButton.swift in Sources */,
 				3022C1F327C36D0700EE60CC /* AppDelegate.swift in Sources */,
 				3022C1F527C36D0700EE60CC /* SceneDelegate.swift in Sources */,
+				307B227627C5EF64003032BC /* SignUpWorker.swift in Sources */,
 				301A664427C4C35A00264F84 /* ChatWorker.swift in Sources */,
 				3022C22427C36D3B00EE60CC /* ThemeManager.swift in Sources */,
+				3026021C27D97B2100134DC8 /* RepoListModel.swift in Sources */,
+				3026021F27D97C6500134DC8 /* RepoViewController.swift in Sources */,
+				3061A3DA27D8D6C900C4604B /* NewRoomWorker.swift in Sources */,
+				307B227827C5EF64003032BC /* SignUpViewController.swift in Sources */,
+				3061A3DB27D8D6C900C4604B /* NewRoomRouter.swift in Sources */,
+				307B227727C5EF64003032BC /* SignUpRouter.swift in Sources */,
 				301A664527C4C35A00264F84 /* ChatRouter.swift in Sources */,
 				3022C23727C3756300EE60CC /* SignInInteractor.swift in Sources */,
 				301A664627C4C35A00264F84 /* ChatViewController.swift in Sources */,
@@ -577,7 +722,10 @@
 				3022C23E27C37DED00EE60CC /* UIFloatingTextField.swift in Sources */,
 				30B3A99827C3975B001D8A7F /* NewFeedViewController.swift in Sources */,
 				30B3A99A27C3975B001D8A7F /* NewFeedConfigurator.swift in Sources */,
+				307B227A27C5EF64003032BC /* SignUpConfigurator.swift in Sources */,
 				30B3A98C27C38BAB001D8A7F /* Extension+UIView.swift in Sources */,
+				307B227927C5EF64003032BC /* SignUpInteractor.swift in Sources */,
+				307B228B27C60B45003032BC /* NewFeedHeaderCell.swift in Sources */,
 				301A664827C4C35A00264F84 /* ChatConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

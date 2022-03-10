@@ -10,7 +10,7 @@
 import UIKit
 
 protocol NewFeedRoutingLogic: class {
-    
+    func openPersonalChat()
 }
 
 class NewFeedRouter {
@@ -18,6 +18,11 @@ class NewFeedRouter {
 }
 
 extension NewFeedRouter: NewFeedRoutingLogic {
+    
+    func openPersonalChat() {
+        let vc = ChatConfigurator.viewcontroller()
+        viewController.navigationController?.pushViewController(vc, animated: true)
+    }
    
     // MARK: Navigation
     /* Example
