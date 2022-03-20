@@ -45,6 +45,12 @@
 		3061A3DD27D8D6C900C4604B /* NewRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061A3D727D8D6C900C4604B /* NewRoomInteractor.swift */; };
 		3061A3DE27D8D6C900C4604B /* NewRoomConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061A3D827D8D6C900C4604B /* NewRoomConfigurator.swift */; };
 		3061A3DF27D8D6C900C4604B /* NewRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3061A3D927D8D6C900C4604B /* NewRoomViewController.xib */; };
+		307A75B227E35E9C005F9DF4 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307A75B127E35E9C005F9DF4 /* BaseRequest.swift */; };
+		307A75B627E36247005F9DF4 /* SupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307A75B427E36247005F9DF4 /* SupportVC.swift */; };
+		307A75B727E36248005F9DF4 /* SupportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307A75B527E36247005F9DF4 /* SupportVC.xib */; };
+		307A75B927E36276005F9DF4 /* SupportWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307A75B827E36276005F9DF4 /* SupportWorker.swift */; };
+		307A75BC27E362EE005F9DF4 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307A75BB27E362EE005F9DF4 /* ProductModel.swift */; };
+		307A75BE27E365F7005F9DF4 /* SupportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307A75BD27E365F6005F9DF4 /* SupportViewModel.swift */; };
 		307B227627C5EF64003032BC /* SignUpWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B227027C5EF64003032BC /* SignUpWorker.swift */; };
 		307B227727C5EF64003032BC /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B227127C5EF64003032BC /* SignUpRouter.swift */; };
 		307B227827C5EF64003032BC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B227227C5EF64003032BC /* SignUpViewController.swift */; };
@@ -58,6 +64,8 @@
 		307B228827C60ADA003032BC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B228727C60ADA003032BC /* UserModel.swift */; };
 		307B228B27C60B45003032BC /* NewFeedHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B228927C60B45003032BC /* NewFeedHeaderCell.swift */; };
 		307B228C27C60B45003032BC /* NewFeedHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307B228A27C60B45003032BC /* NewFeedHeaderCell.xib */; };
+		308C8A3027E4F4DA008623A3 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C8A2E27E4F4DA008623A3 /* ProductCell.swift */; };
+		308C8A3127E4F4DA008623A3 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308C8A2F27E4F4DA008623A3 /* ProductCell.xib */; };
 		30B3A98C27C38BAB001D8A7F /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A98B27C38BAB001D8A7F /* Extension+UIView.swift */; };
 		30B3A98E27C391D8001D8A7F /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A98D27C391D8001D8A7F /* GradientButton.swift */; };
 		30B3A99627C3975B001D8A7F /* NewFeedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A99027C3975B001D8A7F /* NewFeedWorker.swift */; };
@@ -67,6 +75,8 @@
 		30B3A99A27C3975B001D8A7F /* NewFeedConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A99427C3975B001D8A7F /* NewFeedConfigurator.swift */; };
 		30B3A99B27C3975B001D8A7F /* NewFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B3A99527C3975B001D8A7F /* NewFeedViewController.xib */; };
 		30B3A99D27C39BF7001D8A7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30B3A99C27C39BF7001D8A7F /* GoogleService-Info.plist */; };
+		30D0A0BF27E751A100A5ED8B /* SupportCovidWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D0A0BE27E751A100A5ED8B /* SupportCovidWorker.swift */; };
+		30D0A0C127E7540900A5ED8B /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D0A0C027E7540900A5ED8B /* SectionModel.swift */; };
 		9008985B68323EF9CCF2092E /* libPods-AppLab-AppLabUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEDC7532D60DBFFA0A7AE51 /* libPods-AppLab-AppLabUITests.a */; };
 		94D267FD32A89B68532EAE03 /* libPods-AppLab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E482546D3C829754B4F5FB /* libPods-AppLab.a */; };
 		CC9AF7D7ABC73354ED61E75B /* libPods-AppLabTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 918F718C157FD1BA74ED814C /* libPods-AppLabTests.a */; };
@@ -135,6 +145,12 @@
 		3061A3D727D8D6C900C4604B /* NewRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoomInteractor.swift; sourceTree = "<group>"; };
 		3061A3D827D8D6C900C4604B /* NewRoomConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoomConfigurator.swift; sourceTree = "<group>"; };
 		3061A3D927D8D6C900C4604B /* NewRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewRoomViewController.xib; sourceTree = "<group>"; };
+		307A75B127E35E9C005F9DF4 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		307A75B427E36247005F9DF4 /* SupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
+		307A75B527E36247005F9DF4 /* SupportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportVC.xib; sourceTree = "<group>"; };
+		307A75B827E36276005F9DF4 /* SupportWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportWorker.swift; sourceTree = "<group>"; };
+		307A75BB27E362EE005F9DF4 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		307A75BD27E365F6005F9DF4 /* SupportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewModel.swift; sourceTree = "<group>"; };
 		307B227027C5EF64003032BC /* SignUpWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWorker.swift; sourceTree = "<group>"; };
 		307B227127C5EF64003032BC /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		307B227227C5EF64003032BC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +164,8 @@
 		307B228727C60ADA003032BC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		307B228927C60B45003032BC /* NewFeedHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedHeaderCell.swift; sourceTree = "<group>"; };
 		307B228A27C60B45003032BC /* NewFeedHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFeedHeaderCell.xib; sourceTree = "<group>"; };
+		308C8A2E27E4F4DA008623A3 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		308C8A2F27E4F4DA008623A3 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		30B3A98B27C38BAB001D8A7F /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		30B3A98D27C391D8001D8A7F /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		30B3A99027C3975B001D8A7F /* NewFeedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedWorker.swift; sourceTree = "<group>"; };
@@ -157,6 +175,8 @@
 		30B3A99427C3975B001D8A7F /* NewFeedConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedConfigurator.swift; sourceTree = "<group>"; };
 		30B3A99527C3975B001D8A7F /* NewFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFeedViewController.xib; sourceTree = "<group>"; };
 		30B3A99C27C39BF7001D8A7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30D0A0BE27E751A100A5ED8B /* SupportCovidWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCovidWorker.swift; sourceTree = "<group>"; };
+		30D0A0C027E7540900A5ED8B /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		5209CB58D87A2BD7B379CFC4 /* Pods-AppLabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLabTests.debug.xcconfig"; path = "Target Support Files/Pods-AppLabTests/Pods-AppLabTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5598A321438F75763BE1AF4F /* Pods-AppLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLab.release.xcconfig"; path = "Target Support Files/Pods-AppLab/Pods-AppLab.release.xcconfig"; sourceTree = "<group>"; };
 		8CEAC339C57FA8C54EE5E025 /* Pods-AppLab-AppLabUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLab-AppLabUITests.release.xcconfig"; path = "Target Support Files/Pods-AppLab-AppLabUITests/Pods-AppLab-AppLabUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -260,6 +280,8 @@
 		3022C1F127C36D0700EE60CC /* AppLab */ = {
 			isa = PBXGroup;
 			children = (
+				307A75B327E36225005F9DF4 /* Support */,
+				308F7F7C27E22D5900248150 /* TestExpoxy */,
 				3026021A27D97B0700134DC8 /* RepoListModel */,
 				3061A3D327D8D69100C4604B /* NewRoom */,
 				307B226F27C5EF23003032BC /* SignUp */,
@@ -305,6 +327,7 @@
 				3022C22327C36D3B00EE60CC /* ThemeManager.swift */,
 				3022C23A27C3758B00EE60CC /* BaseViewController.swift */,
 				30B3A98B27C38BAB001D8A7F /* Extension+UIView.swift */,
+				307A75B127E35E9C005F9DF4 /* BaseRequest.swift */,
 				30B3A98D27C391D8001D8A7F /* GradientButton.swift */,
 			);
 			path = Base;
@@ -364,6 +387,29 @@
 			path = NewRoom;
 			sourceTree = "<group>";
 		};
+		307A75B327E36225005F9DF4 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				30D0A0BD27E7497600A5ED8B /* SupportCovid */,
+				308C8A2D27E4F4A5008623A3 /* Cell */,
+				307A75BA27E362B4005F9DF4 /* Models */,
+				307A75B427E36247005F9DF4 /* SupportVC.swift */,
+				307A75B527E36247005F9DF4 /* SupportVC.xib */,
+				307A75B827E36276005F9DF4 /* SupportWorker.swift */,
+				307A75BD27E365F6005F9DF4 /* SupportViewModel.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		307A75BA27E362B4005F9DF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				307A75BB27E362EE005F9DF4 /* ProductModel.swift */,
+				30D0A0C027E7540900A5ED8B /* SectionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		307B226F27C5EF23003032BC /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +451,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		308C8A2D27E4F4A5008623A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				308C8A2E27E4F4DA008623A3 /* ProductCell.swift */,
+				308C8A2F27E4F4DA008623A3 /* ProductCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		308F7F7C27E22D5900248150 /* TestExpoxy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestExpoxy;
+			sourceTree = "<group>";
+		};
 		30B3A98F27C39684001D8A7F /* NewFeed */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +481,14 @@
 				30B3A99527C3975B001D8A7F /* NewFeedViewController.xib */,
 			);
 			path = NewFeed;
+			sourceTree = "<group>";
+		};
+		30D0A0BD27E7497600A5ED8B /* SupportCovid */ = {
+			isa = PBXGroup;
+			children = (
+				30D0A0BE27E751A100A5ED8B /* SupportCovidWorker.swift */,
+			);
+			path = SupportCovid;
 			sourceTree = "<group>";
 		};
 		A6EFA415961413D983C97568 /* Pods */ = {
@@ -544,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3022C23927C3756300EE60CC /* SignInViewController.xib in Resources */,
+				308C8A3127E4F4DA008623A3 /* ProductCell.xib in Resources */,
 				30B3A99B27C3975B001D8A7F /* NewFeedViewController.xib in Resources */,
 				3026022027D97C6600134DC8 /* RepoViewController.xib in Resources */,
 				3061A3DF27D8D6C900C4604B /* NewRoomViewController.xib in Resources */,
@@ -557,6 +628,7 @@
 				307B228C27C60B45003032BC /* NewFeedHeaderCell.xib in Resources */,
 				301886BC27C4A01B00CC3C66 /* NewFeedCell.xib in Resources */,
 				30B3A99D27C39BF7001D8A7F /* GoogleService-Info.plist in Resources */,
+				307A75B727E36248005F9DF4 /* SupportVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,18 +761,21 @@
 				3022C23427C3756300EE60CC /* SignInWorker.swift in Sources */,
 				3022C23B27C3758B00EE60CC /* BaseViewController.swift in Sources */,
 				307B228527C60A5E003032BC /* NewFeedHeaderView.swift in Sources */,
+				30D0A0BF27E751A100A5ED8B /* SupportCovidWorker.swift in Sources */,
 				3026021927D8EB2800134DC8 /* NewRoomModel.swift in Sources */,
 				3022C23827C3756300EE60CC /* SignInConfigurator.swift in Sources */,
 				3061A3DE27D8D6C900C4604B /* NewRoomConfigurator.swift in Sources */,
 				3022C22627C36D8700EE60CC /* MyTheme.swift in Sources */,
 				30B3A99927C3975B001D8A7F /* NewFeedInteractor.swift in Sources */,
 				307B228827C60ADA003032BC /* UserModel.swift in Sources */,
+				307A75BE27E365F7005F9DF4 /* SupportViewModel.swift in Sources */,
 				30B3A99627C3975B001D8A7F /* NewFeedWorker.swift in Sources */,
 				3061A3DC27D8D6C900C4604B /* NewRoomViewController.swift in Sources */,
 				301A664C27C4C3BC00264F84 /* MessageModels.swift in Sources */,
 				3061A3DD27D8D6C900C4604B /* NewRoomInteractor.swift in Sources */,
 				3022C23527C3756300EE60CC /* SignInRouter.swift in Sources */,
 				3022C23627C3756300EE60CC /* SignInViewController.swift in Sources */,
+				307A75B927E36276005F9DF4 /* SupportWorker.swift in Sources */,
 				30B3A98E27C391D8001D8A7F /* GradientButton.swift in Sources */,
 				3022C1F327C36D0700EE60CC /* AppDelegate.swift in Sources */,
 				3022C1F527C36D0700EE60CC /* SceneDelegate.swift in Sources */,
@@ -708,16 +783,21 @@
 				301A664427C4C35A00264F84 /* ChatWorker.swift in Sources */,
 				3022C22427C36D3B00EE60CC /* ThemeManager.swift in Sources */,
 				3026021C27D97B2100134DC8 /* RepoListModel.swift in Sources */,
+				308C8A3027E4F4DA008623A3 /* ProductCell.swift in Sources */,
 				3026021F27D97C6500134DC8 /* RepoViewController.swift in Sources */,
 				3061A3DA27D8D6C900C4604B /* NewRoomWorker.swift in Sources */,
 				307B227827C5EF64003032BC /* SignUpViewController.swift in Sources */,
 				3061A3DB27D8D6C900C4604B /* NewRoomRouter.swift in Sources */,
+				30D0A0C127E7540900A5ED8B /* SectionModel.swift in Sources */,
 				307B227727C5EF64003032BC /* SignUpRouter.swift in Sources */,
 				301A664527C4C35A00264F84 /* ChatRouter.swift in Sources */,
 				3022C23727C3756300EE60CC /* SignInInteractor.swift in Sources */,
 				301A664627C4C35A00264F84 /* ChatViewController.swift in Sources */,
+				307A75B627E36247005F9DF4 /* SupportVC.swift in Sources */,
+				307A75BC27E362EE005F9DF4 /* ProductModel.swift in Sources */,
 				301886BB27C4A01B00CC3C66 /* NewFeedCell.swift in Sources */,
 				301A664727C4C35A00264F84 /* ChatInteractor.swift in Sources */,
+				307A75B227E35E9C005F9DF4 /* BaseRequest.swift in Sources */,
 				30B3A99727C3975B001D8A7F /* NewFeedRouter.swift in Sources */,
 				3022C23E27C37DED00EE60CC /* UIFloatingTextField.swift in Sources */,
 				30B3A99827C3975B001D8A7F /* NewFeedViewController.swift in Sources */,

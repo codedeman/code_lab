@@ -10,18 +10,20 @@ import Combine
 import Foundation
 
 class RepoViewController: BaseViewController {
-    var viewModel: RepoListModel!
+    var viewModel =  RepoListModel()
     var cancellable: AnyCancellable?
 
     @IBOutlet weak var lblTitle: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.lblTitle.text = "omg"
-//        viewModel.fetchRepo()
+//        self.lblTitle.text = "omg"
+        
 ////
-//        cancellable = viewModel.$repoDetail
-//                    .map { $0?.name }
-//                    .assign(to: \.text, on: lblTitle)
+        cancellable = viewModel.$repoDetail
+                    .map { $0?.name }
+                    .assign(to: \.text, on: lblTitle)
+        viewModel.fetchRepo()
+
 
         // Do any additional setup after loading the view.
     }

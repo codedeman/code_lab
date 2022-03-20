@@ -13,9 +13,34 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.navigationController?.isNavigationBarHidden = true
-//        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+      
+        
+//        let gradient = CAGradientLayer()
+//        gradient.frame = (self.navigationController?.navigationBar.frame)!
+//        gradient.colors = [UIColor.red.cgColor,UIColor.orange.cgColor]
+//
+//
+//        self.navigationController?.navigationBar.setBackgroundImage(self.imageFromLayer(layer: gradient), for: UIBarMetrics.default)
+//        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+//        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+//        gradient.locations =  [0.0,0.5,1.0]
+////        self.navigationController.navigationBar.barStyle = .c;
+//        self.navigationController?.isNavigationBarHidden = false
+//        self.navigationController?.setNavigationBarHidden(false, animated: true)
 
+//        [self.navigationController.navigationBar setBackgroundImage:[self imageFromLayer:gradient] forBarMetrics:UIBarMetricsDefault];
+
+        
+//        CAGradientLayer *gradient = [CAGradientLayer layer];
+//            gradient.frame = self.navigationController.navigationBar.frame;
+//        gradient.colors = [BBCStyle sharedInstance].colorTitleBackgroundGradient;
+//        [self.navigationController.navigationBar setBackgroundImage:[self imageFromLayer:gradient] forBarMetrics:UIBarMetricsDefault];
+//
+//        gradient.startPoint = CGPointMake(0.0, 0.5);
+//        gradient.endPoint = CGPointMake(1.0, 0.5);
+//        gradient.locations = @[@0.0, @0.5, @1.0];
+//
     }
     
 
@@ -49,6 +74,36 @@ class BaseViewController: UIViewController {
     }
 
     
+    
+    func imageFromLayer(layer:CALayer) -> UIImage {
+        
+        let rect = CGRect(x: 0, y: 0, width: 1, height: self.navigationController?.navigationBar.frame.size.height ?? 40)
+        
+        UIGraphicsBeginImageContext(rect.size)
+        layer.render(in:  UIGraphicsGetCurrentContext()!)
+        let outputImage =  UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        if let image = outputImage {
+            return image
+        }
+        return UIImage()
+        
+    }
+//    - (UIImage *)imageFromLayer:(CALayer *)layer
+//    {
+//
+//        CGRect rect = CGRectMake(0, 0, 1, self.navigationController.navigationBar.frame.size.height);
+//        UIGraphicsBeginImageContext(rect.size);
+//
+//        [layer renderInContext:UIGraphicsGetCurrentContext()];
+//        layer.contentsGravity = kCAGravityBottomLeft;
+//        UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
+//
+//        UIGraphicsEndImageContext();
+//        return outputImage;
+//    }
+    
 
     /*
     // MARK: - Navigation
@@ -73,3 +128,24 @@ extension UIViewController {
     }
     
 }
+
+
+extension UIColor {
+    
+    convenience init?(hexaRGB: String, alpha: CGFloat = 1) {
+        var chars = Array(hexaRGB.hasPrefix("#") ? hexaRGB.dropFirst() : hexaRGB[...])
+        switch chars.count {
+        case 3: chars = chars.flatMap { [$0, $0] }
+        case 6: break
+        default: return nil
+        }
+        self.init(red: .init(strtoul(String(chars[0...1]), nil, 16)) / 255,
+                green: .init(strtoul(String(chars[2...3]), nil, 16)) / 255,
+                 blue: .init(strtoul(String(chars[4...5]), nil, 16)) / 255,
+                alpha: alpha)
+    }
+}
+
+
+
+

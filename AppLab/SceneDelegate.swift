@@ -17,10 +17,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         FirebaseApp.configure()
+        let gradient = CAGradientLayer()
+        let sizeLength = UIScreen.main.bounds.size.height * 2
+        let defaultNavigationBarFrame = CGRect(x: 0, y: 0, width: sizeLength, height: 64)
 
-        let vc =  RepoViewController(nibName: "RepoViewController", bundle: nil)
+        gradient.frame = defaultNavigationBarFrame
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+//        gradient.locations =  [0.0,0.5,1.0]
+        gradient.colors = [UIColor.red.cgColor,UIColor.orange.cgColor]
+
+        UINavigationBar.appearance().setBackgroundImage(self.imageFromLayer(layer: gradient), for: .default)
+        
+//        UINavigationBar.appearance().backgroundColor = .green // backgorund color with gradient
+
+        let vc =  SupportVC(nibName: "SupportVC", bundle: nil)
         let navi = UINavigationController(rootViewController: vc)
-        window?.rootViewController = navi
+        window?.rootViewController = vc
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -29,6 +42,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+    }
+    
+    
+    func imageFromLayer(layer:CALayer) -> UIImage {
+        
+        UIGraphicsBeginImageContext(layer.frame.size)
+
+            layer.render(in: UIGraphicsGetCurrentContext()!)
+
+            let outputImage = UIGraphicsGetImageFromCurrentImageContext()
+
+            UIGraphicsEndImageContext()
+
+            return outputImage!
+//        let rect = CGRect(x: 0, y: 0, width: 1, height: 40)
+//
+//        UIGraphicsBeginImageContext(rect.size)
+//        layer.render(in:  UIGraphicsGetCurrentContext()!)
+//        let outputImage =  UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//
+//        if let image = outputImage {
+//            return image
+//        }
+//        return UIImage()
+        
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
