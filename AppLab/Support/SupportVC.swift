@@ -15,6 +15,8 @@ class SupportVC: BaseViewController {
     @IBOutlet weak var navC: UIView!
     @IBOutlet weak var tableView: UITableView!
     let respository:SupportRequest = SupportRequest()
+    
+    let repositoryCovid:SupportCovidModel = SupportCovidModel()
     let disposeBag = DisposeBag()
     var productModel:Observable<[ProductItemModel]>?
     
@@ -38,9 +40,7 @@ class SupportVC: BaseViewController {
         self.navigationItem.title = "Fuck your idiot";
 
         
-        
-//        self.navigationController?.title = "Fuck😄".uppercased()
-//        self.
+
         tableView.register(UINib.init(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
             
         self.tableView.separatorStyle = .none
@@ -56,6 +56,8 @@ class SupportVC: BaseViewController {
         }.disposed(by: disposeBag)
         
         self.tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        
+       
         
     }
     

@@ -13,6 +13,7 @@ pod 'Firebase/Database'
 
 pod 'Firebase/Storage'
 pod 'Alamofire', '~> 5.5'
+pod 'SDWebImage', '~> 5.0'
 
   target 'AppLabTests' do
     inherit! :search_paths

@@ -9,7 +9,13 @@ import Foundation
 import RxSwift
 
 
-protocol SuportCovid {
+protocol SupportCovidRequestProtocol {
+    func getSection() -> Observable<SectionManager>
+}
+
+class SupportCovidModel:BaseRequest,SupportCovidRequestProtocol {
     
-    
+    func getSection() -> Observable<SectionManager> {
+        return super.createRequest(url: "https://codedeman.github.io/ssd_api/home.json")
+    }
 }

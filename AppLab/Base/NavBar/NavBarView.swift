@@ -40,6 +40,16 @@ class NavBarView: UIView {
         self.btnCancel.isHidden = true
 
     }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let gradient = CAGradientLayer()
+        gradient.frame = self.frame
+        gradient.colors = [UIColor.init(hexaRGB: "#84c113")?.cgColor,UIColor.init(hexaRGB: "#004d29")?.cgColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+                gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+                gradient.locations =  [0.0,0.5,1.0]
+        self.layer.insertSublayer(gradient, at: 0)
+    }
     
     @IBAction func didTabLeftBtn(_ sender: Any) {
         self.onLeftBtnClick!()

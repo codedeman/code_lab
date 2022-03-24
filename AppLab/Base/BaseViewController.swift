@@ -10,8 +10,11 @@ import UIKit
 class BaseViewController: UIViewController {
 
     @IBOutlet weak var naviView: NavBarView!
+    
+    var imgBG:UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
       
@@ -74,7 +77,26 @@ class BaseViewController: UIViewController {
     }
 
     
-    
+    func setUpBG(url:String) {
+        
+        imgBG = UIImageView()
+        
+        self.view.insertSubview(imgBG, at: 0)
+        imgBG.translatesAutoresizingMaskIntoConstraints = false
+        
+        imgBG.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true
+        imgBG.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: 0).isActive = true
+        imgBG.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        imgBG.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        
+        URLSession.shared.dataTask(with: URL(string: url ?? "")!) { data, response, error in
+            DispatchQueue.main.async {
+                guard let data = data else {return}
+                self.imgBG.image = UIImage(data: data)
+            }
+        }.resume()
+        
+    }
     func imageFromLayer(layer:CALayer) -> UIImage {
         
         let rect = CGRect(x: 0, y: 0, width: 1, height: self.navigationController?.navigationBar.frame.size.height ?? 40)

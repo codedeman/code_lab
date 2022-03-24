@@ -24,16 +24,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         gradient.frame = defaultNavigationBarFrame
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
-//        gradient.locations =  [0.0,0.5,1.0]
-        gradient.colors = [UIColor.red.cgColor,UIColor.orange.cgColor]
+//        gradient.locations =  [0.0,0.5,1.0]#004b2c
+        gradient.colors = [UIColor.init(hexaRGB: "#91bf3e", alpha: 1)?.cgColor,UIColor.init(hexaRGB: "#004b2c", alpha: 1)?.cgColor]
 
         UINavigationBar.appearance().setBackgroundImage(self.imageFromLayer(layer: gradient), for: .default)
         
 //        UINavigationBar.appearance().backgroundColor = .green // backgorund color with gradient
 
-        let vc =  SupportVC(nibName: "SupportVC", bundle: nil)
+        let vc =  SupportCovidVC(nibName: "SupportCovidVC", bundle: nil)
         let navi = UINavigationController(rootViewController: vc)
-        window?.rootViewController = vc
+        window?.rootViewController = navi
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
