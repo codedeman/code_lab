@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SupportCovidVC" customModule="AppLab" customModuleProvider="target">
             <connections>
                 <outlet property="imgBg" destination="tTU-Ai-gSN" id="LaL-39-UsC"/>
-                <outlet property="vComponent" destination="Op7-PD-JAK" id="DeY-Rb-DN7"/>
+                <outlet property="tableView" destination="hak-JX-XPQ" id="lhE-c6-74J"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,19 +27,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0XO-rl-W2p">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Op7-PD-JAK" customClass="DesViewComponent" customModule="AppLab" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="VIq-Dx-EfP"/>
-                            </constraints>
-                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hak-JX-XPQ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="Op7-PD-JAK" secondAttribute="trailing" id="iNe-53-1AI"/>
-                        <constraint firstItem="Op7-PD-JAK" firstAttribute="top" secondItem="0XO-rl-W2p" secondAttribute="top" id="tgi-Tc-mpm"/>
-                        <constraint firstItem="Op7-PD-JAK" firstAttribute="leading" secondItem="0XO-rl-W2p" secondAttribute="leading" id="uVZ-a9-24j"/>
+                        <constraint firstAttribute="bottom" secondItem="hak-JX-XPQ" secondAttribute="bottom" id="BfO-YB-s6E"/>
+                        <constraint firstItem="hak-JX-XPQ" firstAttribute="leading" secondItem="0XO-rl-W2p" secondAttribute="leading" id="bk5-1D-b8U"/>
+                        <constraint firstAttribute="trailing" secondItem="hak-JX-XPQ" secondAttribute="trailing" id="foz-hb-H4N"/>
+                        <constraint firstItem="hak-JX-XPQ" firstAttribute="top" secondItem="0XO-rl-W2p" secondAttribute="top" id="hKC-hH-Nf8"/>
                     </constraints>
                 </view>
             </subviews>

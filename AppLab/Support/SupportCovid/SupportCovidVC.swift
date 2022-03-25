@@ -14,6 +14,7 @@ class SupportCovidVC: BaseViewController {
     let repositoryCovid:SupportCovidModel = SupportCovidModel()
     @IBOutlet weak var imgBg: UIImageView!
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var vComponent: DesViewComponent!
     let disposeBag = DisposeBag()
     
@@ -22,7 +23,6 @@ class SupportCovidVC: BaseViewController {
         super.viewDidLoad()
         self.navigationItem.title = "DM"
 
-      
         
         self.repositoryCovid.getSection().subscribe { screenModel in
                 screenModel.map { section in
@@ -35,6 +35,15 @@ class SupportCovidVC: BaseViewController {
                 }
         }.disposed(by: disposeBag)
         // Do any additional setup after loading the view.
+    }
+    
+    func setUpRXDataSource() {
+//
+        self.tableView.register(UINib.init(nibName:"DesComponentCell" , bundle: nil), forCellReuseIdentifier: "DesComponentCell")
+        
+        
+        
+        
     }
     
     func renderUI(section:SectionTypeModel) {

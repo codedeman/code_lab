@@ -77,6 +77,10 @@
 		30B3A99A27C3975B001D8A7F /* NewFeedConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A99427C3975B001D8A7F /* NewFeedConfigurator.swift */; };
 		30B3A99B27C3975B001D8A7F /* NewFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B3A99527C3975B001D8A7F /* NewFeedViewController.xib */; };
 		30B3A99D27C39BF7001D8A7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30B3A99C27C39BF7001D8A7F /* GoogleService-Info.plist */; };
+		30C665A527EDD87900664A03 /* DesComponentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C665A327EDD87900664A03 /* DesComponentCell.swift */; };
+		30C665A627EDD87900664A03 /* DesComponentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C665A427EDD87900664A03 /* DesComponentCell.xib */; };
+		30C665AA27EDD92C00664A03 /* SourceAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C665A827EDD92C00664A03 /* SourceAccountCell.swift */; };
+		30C665AB27EDD92C00664A03 /* SourceAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C665A927EDD92C00664A03 /* SourceAccountCell.xib */; };
 		30CD3AFA27EB804600E4AD71 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CD3AF927EB804600E4AD71 /* ExtensionString.swift */; };
 		30D0A0BF27E751A100A5ED8B /* SupportCovidWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D0A0BE27E751A100A5ED8B /* SupportCovidWorker.swift */; };
 		30D0A0C127E7540900A5ED8B /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D0A0C027E7540900A5ED8B /* SectionModel.swift */; };
@@ -182,6 +186,10 @@
 		30B3A99427C3975B001D8A7F /* NewFeedConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedConfigurator.swift; sourceTree = "<group>"; };
 		30B3A99527C3975B001D8A7F /* NewFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFeedViewController.xib; sourceTree = "<group>"; };
 		30B3A99C27C39BF7001D8A7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30C665A327EDD87900664A03 /* DesComponentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesComponentCell.swift; sourceTree = "<group>"; };
+		30C665A427EDD87900664A03 /* DesComponentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesComponentCell.xib; sourceTree = "<group>"; };
+		30C665A827EDD92C00664A03 /* SourceAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceAccountCell.swift; sourceTree = "<group>"; };
+		30C665A927EDD92C00664A03 /* SourceAccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceAccountCell.xib; sourceTree = "<group>"; };
 		30CD3AF927EB804600E4AD71 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		30D0A0BE27E751A100A5ED8B /* SupportCovidWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCovidWorker.swift; sourceTree = "<group>"; };
 		30D0A0C027E7540900A5ED8B /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
@@ -465,8 +473,8 @@
 		3088F12E27EA8D580026E510 /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
-				3088F12F27EA8DA90026E510 /* DesViewComponent.swift */,
-				3088F13127EA8DBA0026E510 /* DesViewComponent.xib */,
+				30C665A727EDD8CC00664A03 /* SourceAccount */,
+				30C665A227EDD7D400664A03 /* Des */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -501,6 +509,26 @@
 				30B3A99527C3975B001D8A7F /* NewFeedViewController.xib */,
 			);
 			path = NewFeed;
+			sourceTree = "<group>";
+		};
+		30C665A227EDD7D400664A03 /* Des */ = {
+			isa = PBXGroup;
+			children = (
+				3088F12F27EA8DA90026E510 /* DesViewComponent.swift */,
+				3088F13127EA8DBA0026E510 /* DesViewComponent.xib */,
+				30C665A327EDD87900664A03 /* DesComponentCell.swift */,
+				30C665A427EDD87900664A03 /* DesComponentCell.xib */,
+			);
+			path = Des;
+			sourceTree = "<group>";
+		};
+		30C665A727EDD8CC00664A03 /* SourceAccount */ = {
+			isa = PBXGroup;
+			children = (
+				30C665A827EDD92C00664A03 /* SourceAccountCell.swift */,
+				30C665A927EDD92C00664A03 /* SourceAccountCell.xib */,
+			);
+			path = SourceAccount;
 			sourceTree = "<group>";
 		};
 		30D0A0BD27E7497600A5ED8B /* SupportCovid */ = {
@@ -640,6 +668,7 @@
 				308C8A3127E4F4DA008623A3 /* ProductCell.xib in Resources */,
 				30B3A99B27C3975B001D8A7F /* NewFeedViewController.xib in Resources */,
 				3026022027D97C6600134DC8 /* RepoViewController.xib in Resources */,
+				30C665A627EDD87900664A03 /* DesComponentCell.xib in Resources */,
 				3061A3DF27D8D6C900C4604B /* NewRoomViewController.xib in Resources */,
 				301A664927C4C35A00264F84 /* ChatViewController.xib in Resources */,
 				3022C1FF27C36D0C00EE60CC /* LaunchScreen.storyboard in Resources */,
@@ -647,6 +676,7 @@
 				307B228327C6088D003032BC /* NewFeedHeaderView.xib in Resources */,
 				307B227B27C5EF64003032BC /* SignUpViewController.xib in Resources */,
 				3022C24027C37DFB00EE60CC /* UIFloatingTextField.xib in Resources */,
+				30C665AB27EDD92C00664A03 /* SourceAccountCell.xib in Resources */,
 				3022C1FA27C36D0700EE60CC /* Main.storyboard in Resources */,
 				307B228C27C60B45003032BC /* NewFeedHeaderCell.xib in Resources */,
 				3088F13227EA8DBA0026E510 /* DesViewComponent.xib in Resources */,
@@ -797,11 +827,13 @@
 				307A75BE27E365F7005F9DF4 /* SupportViewModel.swift in Sources */,
 				30B3A99627C3975B001D8A7F /* NewFeedWorker.swift in Sources */,
 				3061A3DC27D8D6C900C4604B /* NewRoomViewController.swift in Sources */,
+				30C665AA27EDD92C00664A03 /* SourceAccountCell.swift in Sources */,
 				301A664C27C4C3BC00264F84 /* MessageModels.swift in Sources */,
 				3061A3DD27D8D6C900C4604B /* NewRoomInteractor.swift in Sources */,
 				3022C23527C3756300EE60CC /* SignInRouter.swift in Sources */,
 				3022C23627C3756300EE60CC /* SignInViewController.swift in Sources */,
 				307A75B927E36276005F9DF4 /* SupportWorker.swift in Sources */,
+				30C665A527EDD87900664A03 /* DesComponentCell.swift in Sources */,
 				30B3A98E27C391D8001D8A7F /* GradientButton.swift in Sources */,
 				3022C1F327C36D0700EE60CC /* AppDelegate.swift in Sources */,
 				3022C1F527C36D0700EE60CC /* SceneDelegate.swift in Sources */,
