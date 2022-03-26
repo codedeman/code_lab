@@ -7,13 +7,14 @@
 
 import Foundation
 
-enum ElementType:String {
-    case background = "BACKGROUND"
-    case navBar = "Navbar"
-    case footer = "FOOTER"
+enum SectionType:String {
+//    case background = "BACKGROUND"
+//    case navBar = "Navbar"
+//    case footer = "FOOTER"
     case description = "Des"
     case sourceAccount = "SOURCEACCOUNT"
     case bene = "BENE"
+    case trans = "TRAN"
 }
 struct SectionManager:Codable {
     
@@ -61,6 +62,7 @@ struct SectionTypeModel:Codable,Hashable{
     var type:String?
     var images:[String]?
     var title:String?
+    var right_title:String?
     var nav_button:NavButton?
     var content:Content?
 }

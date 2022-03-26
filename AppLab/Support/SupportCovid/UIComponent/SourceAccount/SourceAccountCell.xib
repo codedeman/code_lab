@@ -26,12 +26,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrv-nq-J9X">
                                         <rect key="frame" x="0.0" y="0.0" width="670" height="40"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEI-XS-SjL">
-                                                <rect key="frame" x="638" y="20" width="0.0" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dsW-r7-bkU">
                                                 <rect key="frame" x="20" y="8" width="24" height="24"/>
                                                 <constraints>
@@ -41,6 +35,12 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin người chuyển" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0e2-GJ-gqD">
                                                 <rect key="frame" x="44" y="10" width="179.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEI-XS-SjL">
+                                                <rect key="frame" x="638" y="20" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -187,7 +187,9 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="ivComponent" destination="dsW-r7-bkU" id="Zi6-TW-eoD"/>
+                <outlet property="ivNote" destination="Tib-ON-MT6" id="ukJ-5D-WWT"/>
                 <outlet property="lblContent" destination="ypE-yE-8R1" id="a51-hP-Zpq"/>
+                <outlet property="lblNote" destination="WEI-XS-SjL" id="5jQ-Lr-gYL"/>
                 <outlet property="lblSubtile" destination="6Dh-P2-vaX" id="9kx-3m-HgP"/>
                 <outlet property="lblTile" destination="0e2-GJ-gqD" id="h0M-4c-olo"/>
                 <outlet property="vBene" destination="zu4-4U-9d9" id="4zl-GM-Tam"/>

@@ -50,7 +50,7 @@ class SupportCovidVC: BaseViewController {
             }}
         }.disposed(by: disposeBag)
         self.sectionObject.bind(to: tableView.rx.items) { table, index, element in
-            let type = ElementType.init(rawValue: element.sectionComponentType ?? "")
+            let type = SectionType.init(rawValue: element.sectionComponentType ?? "")
             switch type {
             case .description:
                 let component =  DesComponentModel.init(textArtibute: (element.section?.title?.htmlToAttributedString)!, uiImage: UIImage(), url: "")
@@ -65,6 +65,13 @@ class SupportCovidVC: BaseViewController {
                     return self.accountComponent(with: section, from: table)
                 }
                 return UITableViewCell()
+            case .trans:
+                
+                if let section = element.section  {
+                    return self.accountComponent(with: section, from: table)
+                }
+                return UITableViewCell()
+
             default:
                 return self.makeCell(with:  element.section?.title ?? "", from: table)
             }

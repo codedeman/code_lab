@@ -17,8 +17,11 @@ class SourceAccountCell: UITableViewCell {
     @IBOutlet weak var lblSubtile: UILabel!
     @IBOutlet weak var vSub: UIView!
     @IBOutlet weak var vBene: UIView!
-    
     @IBOutlet weak var vSpacing: UIView!
+    
+    @IBOutlet weak var lblNote: UILabel!
+    
+    @IBOutlet weak var ivNote: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .clear
@@ -30,21 +33,39 @@ class SourceAccountCell: UITableViewCell {
     
     func binding(data:SectionTypeModel) {
         
-        let elemenType = ElementType.init(rawValue: data.type ?? "")
+        let elemenType = SectionType.init(rawValue: data.type ?? "")
         
-        if elemenType == .bene {
+        
+        switch elemenType {
+        case .bene:
             self.vSub.isHidden = true
             self.vBene.backgroundColor = UIColor.white
             self.vBene.alpha = 0.19
             self.vBene.clipsToBounds = true
             self.vBene.layer.cornerRadius = 10
             self.vSpacing.isHidden = false
-        } else {
+            break
+        case .sourceAccount:
             self.vSub.isHidden = false
             self.vSpacing.isHidden = true
-
+        case .trans:
+            self.lblSubtile.attributedText = data.right_title?.htmlToAttributedString
+        default:
+            break
             
         }
+//        if elemenType == .bene {
+//            self.vSub.isHidden = true
+//            self.vBene.backgroundColor = UIColor.white
+//            self.vBene.alpha = 0.19
+//            self.vBene.clipsToBounds = true
+//            self.vBene.layer.cornerRadius = 10
+//            self.vSpacing.isHidden = false
+//        } else {
+//            self.vSub.isHidden = false
+//            self.vSpacing.isHidden = true
+//
+//        }
         self.lblTile.attributedText = data.title?.htmlToAttributedString
         self.lblContent.attributedText = data.content?.title?.htmlToAttributedString
         self.lblSubtile.attributedText = data.content?.subtitle?.htmlToAttributedString
@@ -52,7 +73,6 @@ class SourceAccountCell: UITableViewCell {
         URLSession.shared.dataTask(with: url) { data, response, error in
             DispatchQueue.main.async {
                 guard let data = data else {return}
-//                self.imgBG.image = UIImage(data: data)
                 self.ivComponent.image = UIImage(data: data)
             }
         }.resume()
