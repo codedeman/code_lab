@@ -27,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9We-Av-I8C">
-                                <rect key="frame" x="33" y="11.5" width="42" height="21"/>
+                                <rect key="frame" x="28" y="11.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,7 +38,7 @@
                             <constraint firstItem="log-fI-B4k" firstAttribute="leading" secondItem="mlL-9D-NFw" secondAttribute="leading" constant="20" id="Bo2-HI-zOK"/>
                             <constraint firstItem="log-fI-B4k" firstAttribute="centerY" secondItem="mlL-9D-NFw" secondAttribute="centerY" id="SEP-x9-Qzf"/>
                             <constraint firstItem="9We-Av-I8C" firstAttribute="centerY" secondItem="mlL-9D-NFw" secondAttribute="centerY" id="V6m-lq-1fL"/>
-                            <constraint firstItem="9We-Av-I8C" firstAttribute="leading" secondItem="log-fI-B4k" secondAttribute="trailing" constant="5" id="dmW-st-OxJ"/>
+                            <constraint firstItem="9We-Av-I8C" firstAttribute="leading" secondItem="log-fI-B4k" secondAttribute="trailing" id="dmW-st-OxJ"/>
                             <constraint firstItem="log-fI-B4k" firstAttribute="top" secondItem="mlL-9D-NFw" secondAttribute="top" constant="18" id="eRk-n1-M4T"/>
                         </constraints>
                     </view>

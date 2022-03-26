@@ -18,7 +18,8 @@ class SupportCovidVC: BaseViewController {
     @IBOutlet weak var vComponent: DesViewComponent!
     let disposeBag = DisposeBag()
     
-    var similarObjects: PublishSubject<[SectionModel]> = PublishSubject<[SectionModel]>()
+    var sectionObject: PublishSubject<[SectionModel]> = PublishSubject<[SectionModel]>()
+    var screenObj:PublishSubject<[ScreenModel]> = PublishSubject<[ScreenModel]>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,29 +34,22 @@ class SupportCovidVC: BaseViewController {
         self.tableView.separatorStyle = .none
         self.tableView.register(UINib.init(nibName:"DesComponentCell" , bundle: nil), forCellReuseIdentifier: "DesComponentCell")
         self.tableView.register(UINib.init(nibName:"SourceAccountCell" , bundle: nil), forCellReuseIdentifier: "SourceAccountCell")
-
-        
         self.tableView.backgroundColor = .clear
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
-        
         self.repositoryCovid.getSection().subscribe { secModel  in
             secModel.map { sec in
-                self.similarObjects.onNext(sec.sections)
+                self.sectionObject.onNext(sec.sections)
+                self.screenObj.onNext(sec.screens)
             }
         }.disposed(by: disposeBag)
-        
-        similarObjects.subscribe { subject  in
-            subject.map {$0.compactMap { section in
-                let type = ElementType.init(rawValue: section.sectionComponentType ?? "")
-                if type == .background {
-                    self.setUpBG(urlString:section.section?.images?.first ?? "")
-                } else if type == .navBar {
-                    self.navigationItem.title = section.section?.title
-                }
+        screenObj.subscribe { screenModel in
+            screenModel.map {$0.flatMap { screenObj in
+                self.navigationItem.title = screenObj.nav?.title
+                self.setUpBG(urlString: screenObj.main.images?.first ?? "")
             }}
-        }
-    self.similarObjects.bind(to: tableView.rx.items) { table, index, element in
+        }.disposed(by: disposeBag)
+        self.sectionObject.bind(to: tableView.rx.items) { table, index, element in
             let type = ElementType.init(rawValue: element.sectionComponentType ?? "")
             switch type {
             case .description:
@@ -89,7 +83,7 @@ class SupportCovidVC: BaseViewController {
     }
     private func accountComponent(with element: SectionTypeModel, from table: UITableView) -> UITableViewCell {
         let cell = SourceAccountCell.instantiateFromXib()
-                
+        cell.binding(data: element)
         return cell
     }
     

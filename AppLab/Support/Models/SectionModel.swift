@@ -18,14 +18,26 @@ enum ElementType:String {
 struct SectionManager:Codable {
     
     var sections:[SectionModel]
-//    var screens:[ScreenModel]
+    var screens:[ScreenModel]
 }
 
 struct ScreenModel:Codable {
-    
     var id:String?
-    var screenProperties:ScreenProperties?
-    var layout:LayoutModes?
+    var main:MainScreen
+    var nav:ComponentModel?
+    var footer:ComponentModel?
+
+//    var screenProperties:ScreenProperties?
+//    var layout:LayoutModes?
+}
+struct MainScreen:Codable {
+    var images:[String]?
+    var type:String?
+}
+
+struct ComponentModel:Codable {
+    var type:String?
+    var title:String?
 }
 
 
