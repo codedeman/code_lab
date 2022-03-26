@@ -7,11 +7,31 @@
 
 import UIKit
 
+
 class SourceAccountCell: UITableViewCell {
 
+    @IBOutlet weak var lblTile: UILabel!
+    
+    @IBOutlet weak var vSourceAccount: UIView!
+    @IBOutlet weak var ivComponent: UIImageView!
+    
+    @IBOutlet weak var lblContent: UILabel!
+    
+    @IBOutlet weak var lblSubtile: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.backgroundColor = .clear
+        self.vSourceAccount.layer.cornerRadius = 10
+        self.vSourceAccount.clipsToBounds = true
+
+    }
+    
+    func binding(data:SectionTypeModel) {
+        self.lblTile.attributedText = data.title?.htmlToAttributedString
+        self.lblContent.attributedText = data.content?.title?.htmlToAttributedString
+        self.ivComponent.image 
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

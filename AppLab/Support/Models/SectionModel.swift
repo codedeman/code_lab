@@ -13,6 +13,7 @@ enum ElementType:String {
     case footer = "FOOTER"
     case description = "Des"
     case sourceAccount = "SOURCEACCOUNT"
+    case bene = "BENE"
 }
 struct SectionManager:Codable {
     
@@ -49,6 +50,14 @@ struct SectionTypeModel:Codable,Hashable{
     var images:[String]?
     var title:String?
     var nav_button:NavButton?
+    var content:Content?
+}
+
+struct Content:Codable,Hashable {
+    
+    var title:String?
+    var subtitle:String?
+    
 }
 
 struct NavButton:Codable,Hashable {

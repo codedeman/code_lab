@@ -62,7 +62,15 @@ class SupportCovidVC: BaseViewController {
                 let component =  DesComponentModel.init(textArtibute: (element.section?.title?.htmlToAttributedString)!, uiImage: UIImage(), url: "")
                 return self.desComponent(with: component, from: table)
             case .sourceAccount:
-                return self.accountComponent(with: element.section?.title ?? "", from: table)
+                if let section = element.section {
+                    return self.accountComponent(with: section, from: table)
+                }
+                return UITableViewCell()
+            case .bene:
+                if let section = element.section  {
+                    return self.accountComponent(with: section, from: table)
+                }
+                return UITableViewCell()
             default:
                 return self.makeCell(with:  element.section?.title ?? "", from: table)
             }
@@ -79,8 +87,9 @@ class SupportCovidVC: BaseViewController {
         cell.binding(data: element)
         return cell
     }
-    private func accountComponent(with element: String, from table: UITableView) -> UITableViewCell {
-        guard let cell = table.dequeueReusableCell(withIdentifier: "SourceAccountCell") as? SourceAccountCell else {return UITableViewCell()}
+    private func accountComponent(with element: SectionTypeModel, from table: UITableView) -> UITableViewCell {
+        let cell = SourceAccountCell.instantiateFromXib()
+                
         return cell
     }
     

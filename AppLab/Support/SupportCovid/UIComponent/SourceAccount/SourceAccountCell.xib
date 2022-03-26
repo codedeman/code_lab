@@ -121,6 +121,13 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="ivComponent" destination="dsW-r7-bkU" id="Zi6-TW-eoD"/>
+                <outlet property="lblContent" destination="ypE-yE-8R1" id="a51-hP-Zpq"/>
+                <outlet property="lblSubtile" destination="6Dh-P2-vaX" id="9kx-3m-HgP"/>
+                <outlet property="lblTile" destination="0e2-GJ-gqD" id="h0M-4c-olo"/>
+                <outlet property="vSourceAccount" destination="8U5-G4-Hcg" id="Hb2-PU-ZgA"/>
+            </connections>
             <point key="canvasLocation" x="233.33333333333334" y="145.98214285714286"/>
         </tableViewCell>
     </objects>
