@@ -77,7 +77,7 @@ class BaseViewController: UIViewController {
     }
 
     
-    func setUpBG(url:String) {
+    func setUpBG(urlString:String) {
         
         imgBG = UIImageView()
         
@@ -88,8 +88,8 @@ class BaseViewController: UIViewController {
         imgBG.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: 0).isActive = true
         imgBG.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         imgBG.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        
-        URLSession.shared.dataTask(with: URL(string: url ?? "")!) { data, response, error in
+        guard let url = URL(string: urlString) else {return}
+        URLSession.shared.dataTask(with: url) { data, response, error in
             DispatchQueue.main.async {
                 guard let data = data else {return}
                 self.imgBG.image = UIImage(data: data)

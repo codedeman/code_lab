@@ -18,69 +18,73 @@ class SupportCovidVC: BaseViewController {
     @IBOutlet weak var vComponent: DesViewComponent!
     let disposeBag = DisposeBag()
     
+    var similarObjects: PublishSubject<[SectionModel]> = PublishSubject<[SectionModel]>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "DM"
-
-        
-        self.repositoryCovid.getSection().subscribe { screenModel in
-                screenModel.map { section in
-                    section.sections.compactMap { sectionModel in
-                        
-                        if let section = sectionModel.section {
-                            self.renderUI(section:section)
-                        }
-                    }
-                }
-        }.disposed(by: disposeBag)
-        // Do any additional setup after loading the view.
+        self.setUpRXDataSource()
     }
+    
+    
+    
     
     func setUpRXDataSource() {
-//
+        //
+        self.tableView.separatorStyle = .none
         self.tableView.register(UINib.init(nibName:"DesComponentCell" , bundle: nil), forCellReuseIdentifier: "DesComponentCell")
+        self.tableView.register(UINib.init(nibName:"SourceAccountCell" , bundle: nil), forCellReuseIdentifier: "SourceAccountCell")
+
+        
+        self.tableView.backgroundColor = .clear
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         
+        self.repositoryCovid.getSection().subscribe { secModel  in
+            secModel.map { sec in
+                self.similarObjects.onNext(sec.sections)
+            }
+        }.disposed(by: disposeBag)
         
-        
-    }
-    
-    func renderUI(section:SectionTypeModel) {
-        print("section type \(section.type)")
-        let elementType = ElementType.init(rawValue: section.type ?? "1")
-        switch elementType {
-        case .background:
-            self.setUpBG(url: section.images?.first ?? "")
-        case .navBar:
-            self.navigationItem.title = section.title
-            self.navigationItem.titleView?.tintColor = .white
-        case .footer:
-            break
-        case .description:
-        
-            let compnent = DesComponentModel.init(textArtibute: (section.title?.htmlToAttributedString)!, uiImage: UIImage())
-            vComponent.binding(data: compnent)
-        default:
-            break
-            
+        similarObjects.subscribe { subject  in
+            subject.map {$0.compactMap { section in
+                let type = ElementType.init(rawValue: section.sectionComponentType ?? "")
+                if type == .background {
+                    self.setUpBG(urlString:section.section?.images?.first ?? "")
+                } else if type == .navBar {
+                    self.navigationItem.title = section.section?.title
+                }
+            }}
         }
-        
-        
+    self.similarObjects.bind(to: tableView.rx.items) { table, index, element in
+            let type = ElementType.init(rawValue: element.sectionComponentType ?? "")
+            switch type {
+            case .description:
+                let component =  DesComponentModel.init(textArtibute: (element.section?.title?.htmlToAttributedString)!, uiImage: UIImage(), url: "")
+                return self.desComponent(with: component, from: table)
+            case .sourceAccount:
+                return self.accountComponent(with: element.section?.title ?? "", from: table)
+            default:
+                return self.makeCell(with:  element.section?.title ?? "", from: table)
+            }
+        }.disposed(by: disposeBag)
+    }
+    
+    private func makeCell(with element: String, from table: UITableView) -> UITableViewCell {
+        guard let cell = table.dequeueReusableCell(withIdentifier: "Cell") else {return UITableViewCell()}
+        return cell
+    }
+    
+    private func desComponent(with element: DesComponentModel, from table: UITableView) -> UITableViewCell {
+       guard  let cell = table.dequeueReusableCell(withIdentifier: "DesComponentCell") as? DesComponentCell  else {return UITableViewCell()}
+        cell.binding(data: element)
+        return cell
+    }
+    private func accountComponent(with element: String, from table: UITableView) -> UITableViewCell {
+        guard let cell = table.dequeueReusableCell(withIdentifier: "SourceAccountCell") as? SourceAccountCell else {return UITableViewCell()}
+        return cell
     }
     
     
     
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

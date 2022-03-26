@@ -10,6 +10,7 @@ import UIKit
 struct DesComponentModel {
     var textArtibute:NSAttributedString
     var uiImage:UIImage
+    var url:String
 }
 class DesViewComponent: UIView {
 

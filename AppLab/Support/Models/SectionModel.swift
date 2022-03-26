@@ -12,7 +12,7 @@ enum ElementType:String {
     case navBar = "Navbar"
     case footer = "FOOTER"
     case description = "Des"
-    
+    case sourceAccount = "SOURCEACCOUNT"
 }
 struct SectionManager:Codable {
     

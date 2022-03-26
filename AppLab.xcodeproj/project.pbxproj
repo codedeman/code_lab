@@ -473,6 +473,7 @@
 		3088F12E27EA8D580026E510 /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				30F0085727EEC2A100FA59E9 /* Footer */,
 				30C665A727EDD8CC00664A03 /* SourceAccount */,
 				30C665A227EDD7D400664A03 /* Des */,
 			);
@@ -540,6 +541,13 @@
 				30D0A0C327E7630E00A5ED8B /* SupportCovidVC.xib */,
 			);
 			path = SupportCovid;
+			sourceTree = "<group>";
+		};
+		30F0085727EEC2A100FA59E9 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Footer;
 			sourceTree = "<group>";
 		};
 		A6EFA415961413D983C97568 /* Pods */ = {
