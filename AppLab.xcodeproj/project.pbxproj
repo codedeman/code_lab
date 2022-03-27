@@ -68,6 +68,9 @@
 		3088F13227EA8DBA0026E510 /* DesViewComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3088F13127EA8DBA0026E510 /* DesViewComponent.xib */; };
 		308C8A3027E4F4DA008623A3 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C8A2E27E4F4DA008623A3 /* ProductCell.swift */; };
 		308C8A3127E4F4DA008623A3 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308C8A2F27E4F4DA008623A3 /* ProductCell.xib */; };
+		30A028E727F00C0B00E90972 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A028E627F00C0A00E90972 /* FooterView.swift */; };
+		30A028E927F00C2300E90972 /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A028E827F00C2300E90972 /* FooterView.xib */; };
+		30A028EB27F00DC500E90972 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A028EA27F00DC500E90972 /* CustomButton.swift */; };
 		30B3A98C27C38BAB001D8A7F /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A98B27C38BAB001D8A7F /* Extension+UIView.swift */; };
 		30B3A98E27C391D8001D8A7F /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A98D27C391D8001D8A7F /* GradientButton.swift */; };
 		30B3A99627C3975B001D8A7F /* NewFeedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A99027C3975B001D8A7F /* NewFeedWorker.swift */; };
@@ -177,6 +180,9 @@
 		3088F13127EA8DBA0026E510 /* DesViewComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesViewComponent.xib; sourceTree = "<group>"; };
 		308C8A2E27E4F4DA008623A3 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		308C8A2F27E4F4DA008623A3 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		30A028E627F00C0A00E90972 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		30A028E827F00C2300E90972 /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
+		30A028EA27F00DC500E90972 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		30B3A98B27C38BAB001D8A7F /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		30B3A98D27C391D8001D8A7F /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		30B3A99027C3975B001D8A7F /* NewFeedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedWorker.swift; sourceTree = "<group>"; };
@@ -348,6 +354,7 @@
 				307A75B127E35E9C005F9DF4 /* BaseRequest.swift */,
 				30B3A98D27C391D8001D8A7F /* GradientButton.swift */,
 				30CD3AF927EB804600E4AD71 /* ExtensionString.swift */,
+				30A028EA27F00DC500E90972 /* CustomButton.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -546,6 +553,8 @@
 		30F0085727EEC2A100FA59E9 /* Footer */ = {
 			isa = PBXGroup;
 			children = (
+				30A028E627F00C0A00E90972 /* FooterView.swift */,
+				30A028E827F00C2300E90972 /* FooterView.xib */,
 			);
 			path = Footer;
 			sourceTree = "<group>";
@@ -679,6 +688,7 @@
 				30C665A627EDD87900664A03 /* DesComponentCell.xib in Resources */,
 				3061A3DF27D8D6C900C4604B /* NewRoomViewController.xib in Resources */,
 				301A664927C4C35A00264F84 /* ChatViewController.xib in Resources */,
+				30A028E927F00C2300E90972 /* FooterView.xib in Resources */,
 				3022C1FF27C36D0C00EE60CC /* LaunchScreen.storyboard in Resources */,
 				307B228027C5F4E6003032BC /* NavBarView.xib in Resources */,
 				307B228327C6088D003032BC /* NewFeedHeaderView.xib in Resources */,
@@ -823,6 +833,7 @@
 				3022C1F727C36D0700EE60CC /* ViewController.swift in Sources */,
 				3022C23427C3756300EE60CC /* SignInWorker.swift in Sources */,
 				3022C23B27C3758B00EE60CC /* BaseViewController.swift in Sources */,
+				30A028EB27F00DC500E90972 /* CustomButton.swift in Sources */,
 				307B228527C60A5E003032BC /* NewFeedHeaderView.swift in Sources */,
 				30D0A0BF27E751A100A5ED8B /* SupportCovidWorker.swift in Sources */,
 				30D0A0C427E7630E00A5ED8B /* SupportCovidVC.swift in Sources */,
@@ -840,6 +851,7 @@
 				3061A3DD27D8D6C900C4604B /* NewRoomInteractor.swift in Sources */,
 				3022C23527C3756300EE60CC /* SignInRouter.swift in Sources */,
 				3022C23627C3756300EE60CC /* SignInViewController.swift in Sources */,
+				30A028E727F00C0B00E90972 /* FooterView.swift in Sources */,
 				307A75B927E36276005F9DF4 /* SupportWorker.swift in Sources */,
 				30C665A527EDD87900664A03 /* DesComponentCell.swift in Sources */,
 				30B3A98E27C391D8001D8A7F /* GradientButton.swift in Sources */,

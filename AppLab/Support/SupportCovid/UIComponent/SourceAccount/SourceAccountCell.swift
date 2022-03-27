@@ -34,8 +34,7 @@ class SourceAccountCell: UITableViewCell {
     func binding(data:SectionTypeModel) {
         
         let elemenType = SectionType.init(rawValue: data.type ?? "")
-        
-        
+
         switch elemenType {
         case .bene:
             self.vSub.isHidden = true
@@ -49,10 +48,22 @@ class SourceAccountCell: UITableViewCell {
             self.vSub.isHidden = false
             self.vSpacing.isHidden = true
         case .trans:
-            self.lblSubtile.attributedText = data.right_title?.htmlToAttributedString
+            self.vSpacing.isHidden = false
+            self.vSub.isHidden = true
+            self.lblTile.attributedText = data.right_title?.htmlToAttributedString
+            self.lblNote.attributedText = data.right_title?.htmlToAttributedString
+            guard let url2 = URL(string: data.images?[1] ?? "") else {return}
+            
+            URLSession.shared.dataTask(with: url2) { data, response, error in
+                DispatchQueue.main.async {
+                    guard let data = data else {return}
+                    self.ivNote.image = UIImage(data: data)
+                }
+            }.resume()
+            
         default:
             break
-            
+
         }
 //        if elemenType == .bene {
 //            self.vSub.isHidden = true
@@ -70,6 +81,9 @@ class SourceAccountCell: UITableViewCell {
         self.lblContent.attributedText = data.content?.title?.htmlToAttributedString
         self.lblSubtile.attributedText = data.content?.subtitle?.htmlToAttributedString
         guard let url = URL(string: data.images?.first ?? "") else {return}
+       
+      
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
             DispatchQueue.main.async {
                 guard let data = data else {return}

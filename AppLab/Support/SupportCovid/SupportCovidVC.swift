@@ -21,14 +21,19 @@ class SupportCovidVC: BaseViewController {
     var sectionObject: PublishSubject<[SectionModel]> = PublishSubject<[SectionModel]>()
     var screenObj:PublishSubject<[ScreenModel]> = PublishSubject<[ScreenModel]>()
 
+//    var accComponent:SourceAccountCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpRXDataSource()
+        self.setUI()
     }
     
-    
-    
-    
+    func setUI() {
+        
+        self.tableView.tableFooterView  = FooterView.instantiateFromXib()
+//        accComponent = SourceAccountCell.instantiateFromXib()
+    }
     func setUpRXDataSource() {
         //
         self.tableView.separatorStyle = .none
@@ -43,9 +48,11 @@ class SupportCovidVC: BaseViewController {
                 self.screenObj.onNext(sec.screens)
             }
         }.disposed(by: disposeBag)
+        
         screenObj.subscribe { screenModel in
             screenModel.map {$0.flatMap { screenObj in
                 self.navigationItem.title = screenObj.nav?.title
+                self.navigationItem.titleView?.tintColor = .white
                 self.setUpBG(urlString: screenObj.main.images?.first ?? "")
             }}
         }.disposed(by: disposeBag)
@@ -66,7 +73,7 @@ class SupportCovidVC: BaseViewController {
                 }
                 return UITableViewCell()
             case .trans:
-                
+
                 if let section = element.section  {
                     return self.accountComponent(with: section, from: table)
                 }

@@ -23,7 +23,7 @@ class SignInViewController: BaseViewController {
     
     @IBOutlet weak var txtPassWorld: UIFloatingTextField!
     
-    @IBOutlet weak var btnLogin: GradientButton!
+//    @IBOutlet weak var btnLogin: GradientButton!
     
     @IBOutlet weak var vContainer: UIView!
     
@@ -63,8 +63,8 @@ class SignInViewController: BaseViewController {
         self.txtUserName.txtInput.text = "kevin@gmail.com"
         self.txtPassWorld.txtInput.text = "111111"
         
-        btnLogin.layer.cornerRadius = 10
-        btnLogin.clipsToBounds = true
+//        btnLogin.layer.cornerRadius = 10
+//        btnLogin.clipsToBounds = true
 //        self.vContainer.layer.cornerRadius = 10
 //        self.vContainer.clipsToBounds = true
         self.navigationController?.isNavigationBarHidden = true
