@@ -8,11 +8,14 @@
 import UIKit
 //import SDW
 protocol SourceAccountCellDelegate:AnyObject {
-    func didSelectItems(index:IndexPath)
+    func didSelectItems(navigation:NavAction)
 }
 class SourceAccountCell: UITableViewCell {
     
-    var index:IndexPath!
+//    var index:IndexPath!
+    
+    var nav_button:NavButton?
+
     @IBOutlet weak var lblTile: UILabel!
     @IBOutlet weak var vSourceAccount: UIView!
     @IBOutlet weak var ivComponent: UIImageView!
@@ -25,6 +28,8 @@ class SourceAccountCell: UITableViewCell {
     @IBOutlet weak var lblAccount: UILabel!
     @IBOutlet weak var ivNote: UIImageView!
     
+    @IBOutlet weak var lblAvaiable: UILabel!
+    
     weak var delegate:SourceAccountCellDelegate!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,7 +41,7 @@ class SourceAccountCell: UITableViewCell {
     }
     
     func binding(data:SectionTypeModel) {
-        
+        self.nav_button = data.nav_button
         let elemenType = SectionType.init(rawValue: data.type ?? "")
         switch elemenType {
         case .bene:
@@ -51,6 +56,7 @@ class SourceAccountCell: UITableViewCell {
             self.vSub.isHidden = false
             self.vSpacing.isHidden = true
             self.lblAccount.text = data.titleAccount
+            self.lblAvaiable.attributedText = data.availBalance?.htmlToAttributedString
         case .trans:
             self.vSpacing.isHidden = false
             self.vSub.isHidden = true
@@ -87,9 +93,11 @@ class SourceAccountCell: UITableViewCell {
     }
     
     @IBAction func didTabSAccountBtn(_ sender: Any) {
-        if let delegate = delegate {
-            delegate.didSelectItems(index: index)
+        let actonType = ActionType.init(rawValue: nav_button?.onClickAction?.type ?? "")
+        if actonType == .popup {
+            self.delegate.didSelectItems(navigation: (nav_button?.onClickAction)!)
         }
+
     }
     
 
@@ -101,8 +109,7 @@ class SourceAccountCell: UITableViewCell {
     
 }
 extension SourceAccountCellDelegate where Self:SupportCovidVC {
-    func didSelectItems(index:IndexPath) {
-        
-    }
-
+  func  didSelectItems(navigation: NavAction) {
+      
+  }
 }

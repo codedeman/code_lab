@@ -90,6 +90,7 @@ class SupportCovidVC: BaseViewController {
                    let elementType = SectionType.init(rawValue: section.sectionComponentType ?? "")
                    if elementType == .sourceAccount {
                        section.section?.titleAccount = resonse.lnAccounts.first?.accountNo ?? ""
+                       section.section?.availBalance = resonse.lnAccounts.first?.availBalance ?? ""
                    }
                })
               
@@ -123,3 +124,5 @@ class SupportCovidVC: BaseViewController {
     
 
 }
+
+extension SupportCovidVC:SourceAccountCellDelegate {}

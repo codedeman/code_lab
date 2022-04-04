@@ -6,7 +6,11 @@
 //
 
 import Foundation
+enum ActionType:String {
+    case back = "NavigateBack"
+    case popup = "PopUp"
 
+}
 enum SectionType:String {
     case description = "Des"
     case sourceAccount = "SOURCEACCOUNT"
@@ -64,6 +68,7 @@ class SectionTypeModel:Codable{
     var nav_button:NavButton?
     var content:Content?
     var  titleAccount:String?
+    var availBalance:String?
 }
 
 struct Content:Codable,Hashable {

@@ -10,7 +10,12 @@ import UIKit
 class FooterView: UIView {
 
     
-    @IBOutlet weak var btnContinue: UIButton!
+    @IBOutlet weak var btnContinue: CustomButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.btnContinue.setButtonStyle(style: .CONTINUE)
+    }
     
     
     /*

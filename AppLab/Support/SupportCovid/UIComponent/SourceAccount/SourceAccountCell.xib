@@ -189,6 +189,7 @@
                 <outlet property="ivComponent" destination="dsW-r7-bkU" id="Zi6-TW-eoD"/>
                 <outlet property="ivNote" destination="Tib-ON-MT6" id="ukJ-5D-WWT"/>
                 <outlet property="lblAccount" destination="8ir-xo-J3q" id="uLX-J5-6c0"/>
+                <outlet property="lblAvaiable" destination="GhN-FQ-6Uh" id="PxB-4Z-lcN"/>
                 <outlet property="lblContent" destination="ypE-yE-8R1" id="a51-hP-Zpq"/>
                 <outlet property="lblNote" destination="WEI-XS-SjL" id="5jQ-Lr-gYL"/>
                 <outlet property="lblSubtile" destination="6Dh-P2-vaX" id="9kx-3m-HgP"/>

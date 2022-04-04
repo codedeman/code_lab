@@ -17,7 +17,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK6-r0-wne" customClass="CustomButton" customModule="AppLab" customModuleProvider="target">
                     <rect key="frame" x="20" y="44" width="356" height="49"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Tiếp tục"/>
+                    <state key="normal" title="Tiếp tục">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="buttonstyle" value="CONTINUE"/>
                     </userDefinedRuntimeAttributes>

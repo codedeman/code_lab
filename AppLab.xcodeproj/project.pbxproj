@@ -16,6 +16,9 @@
 		301A664827C4C35A00264F84 /* ChatConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A664227C4C35A00264F84 /* ChatConfigurator.swift */; };
 		301A664927C4C35A00264F84 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301A664327C4C35A00264F84 /* ChatViewController.xib */; };
 		301A664C27C4C3BC00264F84 /* MessageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A664B27C4C3BC00264F84 /* MessageModels.swift */; };
+		3021ADC327FB490700066065 /* PopUpBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3021ADC127FB490700066065 /* PopUpBaseVC.swift */; };
+		3021ADC427FB490700066065 /* PopUpBaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3021ADC227FB490700066065 /* PopUpBaseVC.xib */; };
+		3021ADC727FB49EB00066065 /* PopupSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3021ADC627FB49EB00066065 /* PopupSectionModel.swift */; };
 		3022C1F327C36D0700EE60CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022C1F227C36D0700EE60CC /* AppDelegate.swift */; };
 		3022C1F527C36D0700EE60CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022C1F427C36D0700EE60CC /* SceneDelegate.swift */; };
 		3022C1F727C36D0700EE60CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022C1F627C36D0700EE60CC /* ViewController.swift */; };
@@ -124,6 +127,9 @@
 		301A664227C4C35A00264F84 /* ChatConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatConfigurator.swift; sourceTree = "<group>"; };
 		301A664327C4C35A00264F84 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		301A664B27C4C3BC00264F84 /* MessageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModels.swift; sourceTree = "<group>"; };
+		3021ADC127FB490700066065 /* PopUpBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpBaseVC.swift; sourceTree = "<group>"; };
+		3021ADC227FB490700066065 /* PopUpBaseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpBaseVC.xib; sourceTree = "<group>"; };
+		3021ADC627FB49EB00066065 /* PopupSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupSectionModel.swift; sourceTree = "<group>"; };
 		3022C1EF27C36D0700EE60CC /* AppLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3022C1F227C36D0700EE60CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3022C1F427C36D0700EE60CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +287,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3021ADC027FB47FA00066065 /* PopUpBase */ = {
+			isa = PBXGroup;
+			children = (
+				3021ADC127FB490700066065 /* PopUpBaseVC.swift */,
+				3021ADC227FB490700066065 /* PopUpBaseVC.xib */,
+			);
+			path = PopUpBase;
+			sourceTree = "<group>";
+		};
+		3021ADC527FB49AE00066065 /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				3021ADC627FB49EB00066065 /* PopupSectionModel.swift */,
+			);
+			path = UIComponent;
+			sourceTree = "<group>";
+		};
 		3022C1E627C36D0700EE60CC = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +329,7 @@
 		3022C1F127C36D0700EE60CC /* AppLab */ = {
 			isa = PBXGroup;
 			children = (
+				3021ADC027FB47FA00066065 /* PopUpBase */,
 				307A75B327E36225005F9DF4 /* Support */,
 				308F7F7C27E22D5900248150 /* TestExpoxy */,
 				3026021A27D97B0700134DC8 /* RepoListModel */,
@@ -348,6 +372,7 @@
 		3022C22227C36D1F00EE60CC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				3021ADC527FB49AE00066065 /* UIComponent */,
 				307B227C27C5F4B0003032BC /* NavBar */,
 				3022C23C27C37D9C00EE60CC /* FloatingTextFiel */,
 				3022C22327C36D3B00EE60CC /* ThemeManager.swift */,
@@ -692,6 +717,7 @@
 				3061A3DF27D8D6C900C4604B /* NewRoomViewController.xib in Resources */,
 				301A664927C4C35A00264F84 /* ChatViewController.xib in Resources */,
 				30A028E927F00C2300E90972 /* FooterView.xib in Resources */,
+				3021ADC427FB490700066065 /* PopUpBaseVC.xib in Resources */,
 				3022C1FF27C36D0C00EE60CC /* LaunchScreen.storyboard in Resources */,
 				307B228027C5F4E6003032BC /* NavBarView.xib in Resources */,
 				307B228327C6088D003032BC /* NewFeedHeaderView.xib in Resources */,
@@ -850,8 +876,10 @@
 				30B3A99627C3975B001D8A7F /* NewFeedWorker.swift in Sources */,
 				3061A3DC27D8D6C900C4604B /* NewRoomViewController.swift in Sources */,
 				30C665AA27EDD92C00664A03 /* SourceAccountCell.swift in Sources */,
+				3021ADC727FB49EB00066065 /* PopupSectionModel.swift in Sources */,
 				301A664C27C4C3BC00264F84 /* MessageModels.swift in Sources */,
 				3061A3DD27D8D6C900C4604B /* NewRoomInteractor.swift in Sources */,
+				3021ADC327FB490700066065 /* PopUpBaseVC.swift in Sources */,
 				3022C23527C3756300EE60CC /* SignInRouter.swift in Sources */,
 				3022C23627C3756300EE60CC /* SignInViewController.swift in Sources */,
 				30A028E727F00C0B00E90972 /* FooterView.swift in Sources */,

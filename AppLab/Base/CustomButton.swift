@@ -57,9 +57,8 @@ enum StyleButton:String {
             let style = StyleButton.init(rawValue: buttonstyle ?? "")
             switch style {
             case .CONTINUE:
-                
                 self.gradientLayer = self.layer as? CAGradientLayer
-                self.gradientLayer.colors = [UIColor.init(hexaRGB: "#5fb621"),UIColor.init(hexaRGB: "#007c30")] as! [Any]
+                self.gradientLayer.colors = [UIColor.init(hexaRGB: "#5fb621")?.cgColor,UIColor.init(hexaRGB: "#007c30")?.cgColor] as! [Any]
                 self.gradientLayer.startPoint = CGPoint(x: startPointX, y: startPointY)
                 self.gradientLayer.endPoint = CGPoint(x: endPointX, y: endPointY)
                 break
