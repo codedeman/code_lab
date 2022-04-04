@@ -19,17 +19,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         FirebaseApp.configure()
         let gradient = CAGradientLayer()
         let sizeLength = UIScreen.main.bounds.size.height * 2
-        let defaultNavigationBarFrame = CGRect(x: 0, y: 0, width: sizeLength, height: 64)
+        let defaultNavigationBarFrame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 64)
 
         gradient.frame = defaultNavigationBarFrame
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
 //        gradient.locations =  [0.0,0.5,1.0]#004b2c
-        gradient.colors = [UIColor.init(hexaRGB: "#91bf3e", alpha: 1)?.cgColor,UIColor.init(hexaRGB: "#004b2c", alpha: 1)?.cgColor]
+        gradient.colors = [UIColor.init(hexaRGB: "#84c113", alpha: 1)?.cgColor,UIColor.init(hexaRGB: "#004d29", alpha: 1)?.cgColor]
 
         UINavigationBar.appearance().setBackgroundImage(self.imageFromLayer(layer: gradient), for: .default)
-        
-//        UINavigationBar.appearance().backgroundColor = .green // backgorund color with gradient
+
 
         let vc =  SupportCovidVC(nibName: "SupportCovidVC", bundle: nil)
         let navi = UINavigationController(rootViewController: vc)

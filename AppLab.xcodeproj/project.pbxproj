@@ -80,6 +80,7 @@
 		30B3A99A27C3975B001D8A7F /* NewFeedConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A99427C3975B001D8A7F /* NewFeedConfigurator.swift */; };
 		30B3A99B27C3975B001D8A7F /* NewFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B3A99527C3975B001D8A7F /* NewFeedViewController.xib */; };
 		30B3A99D27C39BF7001D8A7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30B3A99C27C39BF7001D8A7F /* GoogleService-Info.plist */; };
+		30C2858E27F5EEE900A795A6 /* ListAccountModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C2858D27F5EEE900A795A6 /* ListAccountModels.swift */; };
 		30C665A527EDD87900664A03 /* DesComponentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C665A327EDD87900664A03 /* DesComponentCell.swift */; };
 		30C665A627EDD87900664A03 /* DesComponentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C665A427EDD87900664A03 /* DesComponentCell.xib */; };
 		30C665AA27EDD92C00664A03 /* SourceAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C665A827EDD92C00664A03 /* SourceAccountCell.swift */; };
@@ -192,6 +193,7 @@
 		30B3A99427C3975B001D8A7F /* NewFeedConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedConfigurator.swift; sourceTree = "<group>"; };
 		30B3A99527C3975B001D8A7F /* NewFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFeedViewController.xib; sourceTree = "<group>"; };
 		30B3A99C27C39BF7001D8A7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30C2858D27F5EEE900A795A6 /* ListAccountModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAccountModels.swift; sourceTree = "<group>"; };
 		30C665A327EDD87900664A03 /* DesComponentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesComponentCell.swift; sourceTree = "<group>"; };
 		30C665A427EDD87900664A03 /* DesComponentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesComponentCell.xib; sourceTree = "<group>"; };
 		30C665A827EDD92C00664A03 /* SourceAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceAccountCell.swift; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 			children = (
 				307A75BB27E362EE005F9DF4 /* ProductModel.swift */,
 				30D0A0C027E7540900A5ED8B /* SectionModel.swift */,
+				30C2858D27F5EEE900A795A6 /* ListAccountModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -877,6 +880,7 @@
 				301A664727C4C35A00264F84 /* ChatInteractor.swift in Sources */,
 				307A75B227E35E9C005F9DF4 /* BaseRequest.swift in Sources */,
 				30B3A99727C3975B001D8A7F /* NewFeedRouter.swift in Sources */,
+				30C2858E27F5EEE900A795A6 /* ListAccountModels.swift in Sources */,
 				3022C23E27C37DED00EE60CC /* UIFloatingTextField.swift in Sources */,
 				30B3A99827C3975B001D8A7F /* NewFeedViewController.swift in Sources */,
 				3088F13027EA8DA90026E510 /* DesViewComponent.swift in Sources */,

@@ -8,9 +8,6 @@
 import Foundation
 
 enum SectionType:String {
-//    case background = "BACKGROUND"
-//    case navBar = "Navbar"
-//    case footer = "FOOTER"
     case description = "Des"
     case sourceAccount = "SOURCEACCOUNT"
     case bene = "BENE"
@@ -27,9 +24,6 @@ struct ScreenModel:Codable {
     var main:MainScreen
     var nav:ComponentModel?
     var footer:ComponentModel?
-
-//    var screenProperties:ScreenProperties?
-//    var layout:LayoutModes?
 }
 struct MainScreen:Codable {
     var images:[String]?
@@ -58,13 +52,18 @@ struct SectionModel:Codable {
     
 }
 
-struct SectionTypeModel:Codable,Hashable{
+class SectionTypeModel:Codable{
+//    static func == (lhs: SectionTypeModel, rhs: SectionTypeModel) -> Bool {
+//        return lhs.type == rhs.type
+//    }
+    
     var type:String?
     var images:[String]?
     var title:String?
     var right_title:String?
     var nav_button:NavButton?
     var content:Content?
+    var  titleAccount:String?
 }
 
 struct Content:Codable,Hashable {

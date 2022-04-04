@@ -7,10 +7,13 @@
 
 import UIKit
 //import SDW
+protocol SourceAccountCellDelegate:AnyObject {
+    func didSelectItems(index:IndexPath)
+}
 class SourceAccountCell: UITableViewCell {
-
-    @IBOutlet weak var lblTile: UILabel!
     
+    var index:IndexPath!
+    @IBOutlet weak var lblTile: UILabel!
     @IBOutlet weak var vSourceAccount: UIView!
     @IBOutlet weak var ivComponent: UIImageView!
     @IBOutlet weak var lblContent: UILabel!
@@ -18,10 +21,11 @@ class SourceAccountCell: UITableViewCell {
     @IBOutlet weak var vSub: UIView!
     @IBOutlet weak var vBene: UIView!
     @IBOutlet weak var vSpacing: UIView!
-    
     @IBOutlet weak var lblNote: UILabel!
-    
+    @IBOutlet weak var lblAccount: UILabel!
     @IBOutlet weak var ivNote: UIImageView!
+    
+    weak var delegate:SourceAccountCellDelegate!
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .clear
@@ -34,7 +38,6 @@ class SourceAccountCell: UITableViewCell {
     func binding(data:SectionTypeModel) {
         
         let elemenType = SectionType.init(rawValue: data.type ?? "")
-
         switch elemenType {
         case .bene:
             self.vSub.isHidden = true
@@ -47,6 +50,7 @@ class SourceAccountCell: UITableViewCell {
         case .sourceAccount:
             self.vSub.isHidden = false
             self.vSpacing.isHidden = true
+            self.lblAccount.text = data.titleAccount
         case .trans:
             self.vSpacing.isHidden = false
             self.vSub.isHidden = true
@@ -65,18 +69,6 @@ class SourceAccountCell: UITableViewCell {
             break
 
         }
-//        if elemenType == .bene {
-//            self.vSub.isHidden = true
-//            self.vBene.backgroundColor = UIColor.white
-//            self.vBene.alpha = 0.19
-//            self.vBene.clipsToBounds = true
-//            self.vBene.layer.cornerRadius = 10
-//            self.vSpacing.isHidden = false
-//        } else {
-//            self.vSub.isHidden = false
-//            self.vSpacing.isHidden = true
-//
-//        }
         self.lblTile.attributedText = data.title?.htmlToAttributedString
         self.lblContent.attributedText = data.content?.title?.htmlToAttributedString
         self.lblSubtile.attributedText = data.content?.subtitle?.htmlToAttributedString
@@ -95,7 +87,9 @@ class SourceAccountCell: UITableViewCell {
     }
     
     @IBAction func didTabSAccountBtn(_ sender: Any) {
-        
+        if let delegate = delegate {
+            delegate.didSelectItems(index: index)
+        }
     }
     
 
@@ -105,4 +99,10 @@ class SourceAccountCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+extension SourceAccountCellDelegate where Self:SupportCovidVC {
+    func didSelectItems(index:IndexPath) {
+        
+    }
+
 }

@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func didTabOpenBtn(_ sender: Any) {
+        let vc = SupportCovidVC.initWithNib()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
