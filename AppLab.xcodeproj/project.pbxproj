@@ -75,7 +75,7 @@
 		30A028E927F00C2300E90972 /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A028E827F00C2300E90972 /* FooterView.xib */; };
 		30A028EB27F00DC500E90972 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A028EA27F00DC500E90972 /* CustomButton.swift */; };
 		30B3A98C27C38BAB001D8A7F /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A98B27C38BAB001D8A7F /* Extension+UIView.swift */; };
-		30B3A98E27C391D8001D8A7F /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A98D27C391D8001D8A7F /* GradientButton.swift */; };
+		30B3A98E27C391D8001D8A7F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A98D27C391D8001D8A7F /* GradientView.swift */; };
 		30B3A99627C3975B001D8A7F /* NewFeedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A99027C3975B001D8A7F /* NewFeedWorker.swift */; };
 		30B3A99727C3975B001D8A7F /* NewFeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A99127C3975B001D8A7F /* NewFeedRouter.swift */; };
 		30B3A99827C3975B001D8A7F /* NewFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B3A99227C3975B001D8A7F /* NewFeedViewController.swift */; };
@@ -191,7 +191,7 @@
 		30A028E827F00C2300E90972 /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
 		30A028EA27F00DC500E90972 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		30B3A98B27C38BAB001D8A7F /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
-		30B3A98D27C391D8001D8A7F /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		30B3A98D27C391D8001D8A7F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		30B3A99027C3975B001D8A7F /* NewFeedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedWorker.swift; sourceTree = "<group>"; };
 		30B3A99127C3975B001D8A7F /* NewFeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedRouter.swift; sourceTree = "<group>"; };
 		30B3A99227C3975B001D8A7F /* NewFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedViewController.swift; sourceTree = "<group>"; };
@@ -379,7 +379,7 @@
 				3022C23A27C3758B00EE60CC /* BaseViewController.swift */,
 				30B3A98B27C38BAB001D8A7F /* Extension+UIView.swift */,
 				307A75B127E35E9C005F9DF4 /* BaseRequest.swift */,
-				30B3A98D27C391D8001D8A7F /* GradientButton.swift */,
+				30B3A98D27C391D8001D8A7F /* GradientView.swift */,
 				30CD3AF927EB804600E4AD71 /* ExtensionString.swift */,
 				30A028EA27F00DC500E90972 /* CustomButton.swift */,
 			);
@@ -885,7 +885,7 @@
 				30A028E727F00C0B00E90972 /* FooterView.swift in Sources */,
 				307A75B927E36276005F9DF4 /* SupportWorker.swift in Sources */,
 				30C665A527EDD87900664A03 /* DesComponentCell.swift in Sources */,
-				30B3A98E27C391D8001D8A7F /* GradientButton.swift in Sources */,
+				30B3A98E27C391D8001D8A7F /* GradientView.swift in Sources */,
 				3022C1F327C36D0700EE60CC /* AppDelegate.swift in Sources */,
 				3022C1F527C36D0700EE60CC /* SceneDelegate.swift in Sources */,
 				307B227627C5EF64003032BC /* SignUpWorker.swift in Sources */,

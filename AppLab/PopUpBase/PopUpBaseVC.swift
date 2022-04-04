@@ -29,6 +29,8 @@ class SearchSupportPopUpCell : UITableViewCell {
 
 final class PopUpBaseVC: UIViewController {
 
+    @IBOutlet weak var lblTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
