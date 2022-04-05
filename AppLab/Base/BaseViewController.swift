@@ -78,7 +78,7 @@ class BaseViewController: UIViewController {
     
     func showPopUp<Item:PopupSelectionModel,Cell:SearchSupportPopUpCell> (title:String,
                                                                           dataSource:[Item],
-                                                                          cellClass : Cell.Type,
+                                                                          cellClass :           Cell.Type,
                                                                           configCell : @escaping ((Cell,Item,Int) -> Void)) {
         let popup = PopUpBaseVC<Item,Cell>()
         popup.configureCell = configCell

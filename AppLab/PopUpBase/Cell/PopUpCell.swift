@@ -1,5 +1,5 @@
 //
-//  SourceAccountCell.swift
+//  PopUpCell.swift
 //  AppLab
 //
 //  Created by Pham Kien on 05.04.22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SourceAccountCell: UITableViewCell,SearchSupportPopUpCell{
+class PopUpCell:SearchSupportPopUpCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

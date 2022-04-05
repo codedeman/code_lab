@@ -111,8 +111,9 @@ class SourceAccountCell: UITableViewCell {
 extension SourceAccountCellDelegate where Self:SupportCovidVC {
   func  didSelectItems(navigation: NavAction) {
       
-      self.showPopUp(title: "Tai khoan nguon", dataSource: self.sourceAcount, cellClass: <#T##Cell.Type#>) { <#Cell#>, <#PopupSelectionModel#>, <#Int#> in
-          <#code#>
+      self.showPopUp(title: "Tai khoan nguon", dataSource: self.sourceAcount.value, cellClass: PopUpCell.self) { cell, model, index in
+          
+          
       }
 //      let vc = PopUpBaseVC<self.sourceAcount, SearchSupportPopUpCell;>.initWithNib()
 //      vc.config

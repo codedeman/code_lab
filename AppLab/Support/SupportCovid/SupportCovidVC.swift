@@ -8,6 +8,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+//import Combine
 
 class SupportCovidVC: BaseViewController {
 
@@ -20,7 +21,7 @@ class SupportCovidVC: BaseViewController {
     
     var sectionObject = BehaviorRelay<[SectionModel]>(value: [])
     var screenObj:PublishSubject<[ScreenModel]> = PublishSubject<[ScreenModel]>()
-    var sourceAcount:PublishSubject<[AccountModels]> = PublishSubject<[AccountModels]>()
+    var sourceAcount:BehaviorRelay <[AccountModels]> = BehaviorRelay(value: [])
 
     
     override func viewDidLoad() {
@@ -33,8 +34,7 @@ class SupportCovidVC: BaseViewController {
     
     func setUI() {
         self.tableView.tableFooterView  = FooterView.instantiateFromXib()
-        self.sourceComponent = SourceAccountCell.instantiateFromXib()
-        self.beneComponent = SourceAccountCell.instantiateFromXib()
+        
     }
     func setUpRXDataSource() {
         //
@@ -44,18 +44,17 @@ class SupportCovidVC: BaseViewController {
         self.tableView.register(UINib.init(nibName:"SourceAccountCell" , bundle: nil), forCellReuseIdentifier: "SourceAccountCell")
         self.tableView.backgroundColor = .clear
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-//        self.tableView.rx.setDelegate(self)
-        self.repositoryCovid.getSection().subscribe { secModel  in
-            secModel.map { sec in
-                self.sectionObject.accept(sec.sections)
-                self.screenObj.onNext(sec.screens)
-            }
-        }.disposed(by: disposeBag)
+        self.repositoryCovid.getSection().subscribe {$0.map(<#T##transform: (SectionManager) throws -> Result##(SectionManager) throws -> Result#>)}
+//        self.repositoryCovid.getSection().subscribe { secModel  in
+//            secModel.map { sec in
+//                self.sectionObject.accept(sec.sections)
+//                self.screenObj.onNext(sec.screens)
+//            }
+//        }.disposed(by: disposeBag)
         
         screenObj.subscribe { screenModel in
             screenModel.map {$0.compactMap { screenObj in
                 self.navigationItem.title = screenObj.nav?.title
-                self.navigationItem.titleView?.tintColor = .white
                 self.setUpBG(urlString: screenObj.main.images?.first ?? "")
             }}
         }.disposed(by: disposeBag)
@@ -81,7 +80,7 @@ class SupportCovidVC: BaseViewController {
     }
     
    private func bindingAccount() {
-
+       
        self.repositoryCovid.getListAccount().subscribe { event in
            event.map { resonse in
                self.sectionObject.value.map({ section in
@@ -91,13 +90,12 @@ class SupportCovidVC: BaseViewController {
                        section.section?.availBalance = resonse.lnAccounts.first?.availBalance ?? ""
                    }
                })
-              
-//               self.sourceAcount.onNext(resonse.lnAccounts)
+               
            }
        }.disposed(by: disposeBag)
        
        self.tableView.reloadData()
-    }
+   }
     
     private func makeCell(with element: String, from table: UITableView) -> UITableViewCell {
         guard let cell = table.dequeueReusableCell(withIdentifier: "Cell") else {return UITableViewCell()}
@@ -105,8 +103,6 @@ class SupportCovidVC: BaseViewController {
     }
     
     private func desComponent(with element: DesComponentModel, from table: UITableView) -> UITableViewCell {
-        
-        
        guard  let cell = table.dequeueReusableCell(withIdentifier: "DesComponentCell") as? DesComponentCell  else {return UITableViewCell()}
         cell.binding(data: element)
         return cell
@@ -117,10 +113,6 @@ class SupportCovidVC: BaseViewController {
         cell.delegate = self
         return cell
     }
-    
-    
-    
-
 }
 
 extension SupportCovidVC:SourceAccountCellDelegate {}

@@ -10,9 +10,14 @@ import UIKit
 @IBDesignable  class GradientView: UIView {
 
     
+    
     private var gradientLayer: CAGradientLayer!
 
     
+    
+    func setGradientViewStyle(style:StyleButton) {
+        self.viewStyle = style.rawValue
+    }
     @IBInspectable var startPointX: CGFloat = 0.5 {
         didSet {
             setNeedsLayout()
@@ -65,6 +70,23 @@ import UIKit
     }
     override class var layerClass: AnyClass {
         return CAGradientLayer.self
+    }
+    
+    
+    @IBInspectable private var viewStyle: String? {  // <-- warning here
+        didSet {
+            let style = StyleButton.init(rawValue: viewStyle ?? "")
+            switch style {
+            case .CONTINUE:
+                self.gradientLayer = self.layer as? CAGradientLayer
+                self.gradientLayer.colors = [UIColor.init(hexaRGB: "#5fb621")?.cgColor,UIColor.init(hexaRGB: "#007c30")?.cgColor] as! [Any]
+                self.gradientLayer.startPoint = CGPoint(x: startPointX, y: startPointY)
+                self.gradientLayer.endPoint = CGPoint(x: endPointX, y: endPointY)
+                break
+            default:
+                break
+            }
+        }
     }
     override func layoutSubviews() {
         super.layoutSubviews()
