@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpBaseVC" customModule="AppLab" customModuleProvider="target">
             <connections>
                 <outlet property="lblTitle" destination="OUn-fc-ypF" id="sCK-qa-Co9"/>
+                <outlet property="tableView" destination="o8T-Xb-tue" id="Vwx-kj-UyO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

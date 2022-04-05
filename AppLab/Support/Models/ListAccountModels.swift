@@ -13,7 +13,9 @@ struct AcountResponse:Codable {
     var des:String?
     var lnAccounts:[AccountModels]
 }
-struct AccountModels:Codable,Hashable {
+struct AccountModels:Codable,Hashable,PopupSelectionModel {
+    var isSelected: Bool
+    
     var resCode:String?
     var accountNo:String?
     var newAccountNo:String?

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 
 class SearchSupportPopUpCell : UITableViewCell {
@@ -26,13 +28,26 @@ class SearchSupportPopUpCell : UITableViewCell {
 }
 
 
-
-final class PopUpBaseVC: UIViewController {
+ class PopUpBaseVC<Item:PopupSelectionModel,Cell:SearchSupportPopUpCell> :BaseViewController {
 
     @IBOutlet weak var lblTitle: UILabel!
-    
+     
+     @IBOutlet weak var tableView: UITableView!
+     var dataSource:BehaviorRelay<[Item]> = BehaviorRelay(value: [])
+     public var configureCell : ((Cell, Item, Int) -> Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("cell class \(Cell.self)")
+        tableView.register(UINib.init(nibName: "\(Cell.self)", bundle: nil), forCellReuseIdentifier: "\(Cell.self)")
+        dataSource.bind(to: self.tableView.rx.items(cellIdentifier: "\(Cell.self)",cellType: Cell.self)) { [self] (index,element,cell)  in
+            configureCell?(cell,element,index)
+        }
+        
+//        self.similarObjects.bind(to: self.tableView.rx.items(cellIdentifier: "ProductCell",cellType: ProductCell.self)) { (index, element,cell) in
+//            cell.bindingData(object: element)
+//
+//        }.disposed(by: disposeBag)
 
         // Do any additional setup after loading the view.
     }

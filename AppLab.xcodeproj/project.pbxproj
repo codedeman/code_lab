@@ -71,6 +71,8 @@
 		3088F13227EA8DBA0026E510 /* DesViewComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3088F13127EA8DBA0026E510 /* DesViewComponent.xib */; };
 		308C8A3027E4F4DA008623A3 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C8A2E27E4F4DA008623A3 /* ProductCell.swift */; };
 		308C8A3127E4F4DA008623A3 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308C8A2F27E4F4DA008623A3 /* ProductCell.xib */; };
+		3098FE1527FBCF61006A0C01 /* SourceAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3098FE1327FBCF61006A0C01 /* SourceAccountCell.swift */; };
+		3098FE1627FBCF61006A0C01 /* SourceAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3098FE1427FBCF61006A0C01 /* SourceAccountCell.xib */; };
 		30A028E727F00C0B00E90972 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A028E627F00C0A00E90972 /* FooterView.swift */; };
 		30A028E927F00C2300E90972 /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A028E827F00C2300E90972 /* FooterView.xib */; };
 		30A028EB27F00DC500E90972 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A028EA27F00DC500E90972 /* CustomButton.swift */; };
@@ -187,6 +189,8 @@
 		3088F13127EA8DBA0026E510 /* DesViewComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesViewComponent.xib; sourceTree = "<group>"; };
 		308C8A2E27E4F4DA008623A3 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		308C8A2F27E4F4DA008623A3 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		3098FE1327FBCF61006A0C01 /* SourceAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceAccountCell.swift; sourceTree = "<group>"; };
+		3098FE1427FBCF61006A0C01 /* SourceAccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceAccountCell.xib; sourceTree = "<group>"; };
 		30A028E627F00C0A00E90972 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		30A028E827F00C2300E90972 /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
 		30A028EA27F00DC500E90972 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 		3021ADC027FB47FA00066065 /* PopUpBase */ = {
 			isa = PBXGroup;
 			children = (
+				3098FE1227FBCF19006A0C01 /* Cell */,
 				3021ADC127FB490700066065 /* PopUpBaseVC.swift */,
 				3021ADC227FB490700066065 /* PopUpBaseVC.xib */,
 			);
@@ -531,6 +536,15 @@
 			path = TestExpoxy;
 			sourceTree = "<group>";
 		};
+		3098FE1227FBCF19006A0C01 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3098FE1327FBCF61006A0C01 /* SourceAccountCell.swift */,
+				3098FE1427FBCF61006A0C01 /* SourceAccountCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		30B3A98F27C39684001D8A7F /* NewFeed */ = {
 			isa = PBXGroup;
 			children = (
@@ -729,6 +743,7 @@
 				3088F13227EA8DBA0026E510 /* DesViewComponent.xib in Resources */,
 				30D0A0C527E7630E00A5ED8B /* SupportCovidVC.xib in Resources */,
 				301886BC27C4A01B00CC3C66 /* NewFeedCell.xib in Resources */,
+				3098FE1627FBCF61006A0C01 /* SourceAccountCell.xib in Resources */,
 				30B3A99D27C39BF7001D8A7F /* GoogleService-Info.plist in Resources */,
 				307A75B727E36248005F9DF4 /* SupportVC.xib in Resources */,
 			);
@@ -898,6 +913,7 @@
 				307B227827C5EF64003032BC /* SignUpViewController.swift in Sources */,
 				3061A3DB27D8D6C900C4604B /* NewRoomRouter.swift in Sources */,
 				30D0A0C127E7540900A5ED8B /* SectionModel.swift in Sources */,
+				3098FE1527FBCF61006A0C01 /* SourceAccountCell.swift in Sources */,
 				307B227727C5EF64003032BC /* SignUpRouter.swift in Sources */,
 				301A664527C4C35A00264F84 /* ChatRouter.swift in Sources */,
 				3022C23727C3756300EE60CC /* SignInInteractor.swift in Sources */,

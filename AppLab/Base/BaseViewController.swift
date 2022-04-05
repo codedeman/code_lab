@@ -75,6 +75,20 @@ class BaseViewController: UIViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: storyboardId) as! T
         return controller
     }
+    
+    func showPopUp<Item:PopupSelectionModel,Cell:SearchSupportPopUpCell> (title:String,
+                                                                          dataSource:[Item],
+                                                                          cellClass : Cell.Type,
+                                                                          configCell : @escaping ((Cell,Item,Int) -> Void)) {
+        let popup = PopUpBaseVC<Item,Cell>()
+        popup.configureCell = configCell
+        popup.dataSource.accept(dataSource)
+        self.present(popup, animated: true) {
+        
+        }
+        
+        
+    }
 
     
     func setUpBG(urlString:String) {

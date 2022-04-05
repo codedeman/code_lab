@@ -22,8 +22,6 @@ class SupportCovidVC: BaseViewController {
     var screenObj:PublishSubject<[ScreenModel]> = PublishSubject<[ScreenModel]>()
     var sourceAcount:PublishSubject<[AccountModels]> = PublishSubject<[AccountModels]>()
 
-    var sourceComponent:SourceAccountCell!
-    var beneComponent:SourceAccountCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
