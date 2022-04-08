@@ -14,9 +14,12 @@ SDU means the server will decide which component will show in the client how man
 
 
 The client must define how many component is drawn on screen,the component format is fixed
-
 Server will provide the component type for the client show which component from object's server   
 
+## Customize basic attributes 
+
+we can customize atrtributes for each element eg bold, padding/ margin, alighnment etc, we can hide the element if not needed 
+The server will not provide an exact size 
 # Customize the position of basic 
 
 
